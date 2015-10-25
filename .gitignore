@@ -36,6 +36,10 @@ config.txt
 server.log
 participants.db
 
+
+
+
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
