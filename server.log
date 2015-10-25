@@ -1,0 +1,1912 @@
+2015-10-19 23:13:19,505 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:19,602 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:19,669 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:19,771 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:19,833 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:19,915 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:19,947 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:20,027 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:20,096 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:20,177 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:20,216 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:20,328 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:20,408 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:20,490 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:20,583 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:20,641 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:20,715 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:13:29,566 Exception on /assets/sky.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 60, in get_source
+    return loader.get_source(environment, local_name)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/loaders.py", line 175, in get_source
+    contents = f.read().decode(self.encoding)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/encodings/utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x89 in position 0: invalid start byte
+2015-10-19 23:13:29,590 Exception on /assets/platform.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 60, in get_source
+    return loader.get_source(environment, local_name)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/loaders.py", line 175, in get_source
+    contents = f.read().decode(self.encoding)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/encodings/utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x89 in position 0: invalid start byte
+2015-10-19 23:13:29,608 Exception on /assets/star.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 60, in get_source
+    return loader.get_source(environment, local_name)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/loaders.py", line 175, in get_source
+    contents = f.read().decode(self.encoding)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/encodings/utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x89 in position 0: invalid start byte
+2015-10-19 23:13:29,626 Exception on /assets/dude.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 60, in get_source
+    return loader.get_source(environment, local_name)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/loaders.py", line 175, in get_source
+    contents = f.read().decode(self.encoding)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/encodings/utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x89 in position 0: invalid start byte
+2015-10-19 23:14:30,859 Exception on /assets/sky.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/sky.png
+2015-10-19 23:14:30,876 Exception on /assets/platform.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/platform.png
+2015-10-19 23:14:30,887 Exception on /assets/star.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/star.png
+2015-10-19 23:14:30,897 Exception on /assets/dude.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/dude.png
+2015-10-19 23:16:34,950 Exception on /assets/sky.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/sky.png
+2015-10-19 23:16:34,972 Exception on /assets/platform.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/platform.png
+2015-10-19 23:16:34,982 Exception on /assets/star.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/star.png
+2015-10-19 23:16:34,993 Exception on /assets/dude.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/dude.png
+2015-10-19 23:17:14,717 Exception on /assets/platform.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/platform.png
+2015-10-19 23:17:14,725 Exception on /assets/star.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/star.png
+2015-10-19 23:17:14,734 Exception on /assets/dude.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/dude.png
+2015-10-19 23:20:23,492 Exception on /assets/sky.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/sky.png
+2015-10-19 23:20:23,515 Exception on /assets/ground.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/ground.png
+2015-10-19 23:20:23,528 Exception on /assets/star.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/star.png
+2015-10-19 23:20:23,536 Exception on /assets/dude.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/dude.png
+2015-10-19 23:20:25,558 Exception on /assets/dude.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/dude.png
+2015-10-19 23:20:25,558 Exception on /assets/ground.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/ground.png
+2015-10-19 23:20:25,560 Exception on /assets/sky.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/sky.png
+2015-10-19 23:20:25,561 Exception on /assets/star.png [GET]
+Traceback (most recent call last):
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/experiment.py", line 667, in regularpage
+    return render_template(foldername+"/"+pagename)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: assets/star.png
+2015-10-19 23:52:07,353 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:52:07,354 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:52:07,455 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:52:07,491 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:52:07,578 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:52:07,684 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:52:07,710 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:52:07,853 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:52:07,861 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:52:07,949 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:52:08,024 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:52:08,043 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:52:08,115 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:52:08,147 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:52:08,201 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:52:08,203 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-19 23:52:08,234 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5152)
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5153)
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5154)
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5155)
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5139)
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5140)
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5141)
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5142)
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5143)
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5144)
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5145)
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5146)
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5147)
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5148)
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5149)
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5150)
+[2015-10-20 07:20:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5151)
+2015-10-20 07:20:25,988 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:20:26,008 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:20:26,051 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:20:26,144 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:20:26,370 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:20:26,439 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:20:26,481 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:20:26,485 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:20:26,488 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:20:26,508 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:20:26,533 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:20:26,557 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:20:26,605 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:20:26,629 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:20:26,652 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:20:26,674 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:20:26,684 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5445)
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5446)
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5447)
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5448)
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5449)
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5450)
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5451)
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5452)
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5453)
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5454)
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5455)
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5456)
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5457)
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5458)
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5459)
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5460)
+[2015-10-20 07:49:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5461)
+2015-10-20 07:50:00,430 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:50:00,453 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:50:00,459 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:50:00,461 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:50:00,624 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:50:00,671 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:50:00,703 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:50:00,753 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:50:00,777 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:50:00,794 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:50:00,797 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:50:00,823 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:50:00,867 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:50:00,898 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:50:00,913 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:50:00,928 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 07:50:00,949 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 08:46:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5569)
+[2015-10-20 08:46:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5570)
+[2015-10-20 08:46:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5571)
+[2015-10-20 08:46:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5572)
+[2015-10-20 08:46:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5573)
+[2015-10-20 08:46:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5574)
+[2015-10-20 08:46:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5575)
+[2015-10-20 08:46:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5576)
+[2015-10-20 08:46:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5577)
+[2015-10-20 08:46:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5578)
+[2015-10-20 08:46:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5579)
+[2015-10-20 08:46:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5580)
+[2015-10-20 08:46:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5581)
+[2015-10-20 08:46:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5582)
+[2015-10-20 08:46:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5583)
+2015-10-20 08:46:38,842 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:46:38,848 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:46:38,860 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:46:38,863 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:46:38,882 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:46:38,943 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:46:39,074 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:46:39,120 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:46:39,127 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:46:39,182 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:46:39,191 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:46:39,206 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:46:39,218 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:46:39,227 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:46:39,252 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 08:59:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5687)
+[2015-10-20 08:59:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5688)
+[2015-10-20 08:59:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5689)
+[2015-10-20 08:59:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5690)
+[2015-10-20 08:59:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5691)
+[2015-10-20 08:59:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5692)
+[2015-10-20 08:59:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5693)
+[2015-10-20 08:59:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5694)
+[2015-10-20 08:59:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5695)
+[2015-10-20 08:59:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5696)
+[2015-10-20 08:59:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5697)
+[2015-10-20 08:59:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5698)
+[2015-10-20 08:59:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5699)
+[2015-10-20 08:59:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5700)
+[2015-10-20 08:59:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5701)
+2015-10-20 08:59:25,224 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:59:25,240 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:59:25,274 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:59:25,433 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:59:25,469 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:59:25,512 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:59:25,539 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:59:25,592 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:59:25,617 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:59:25,712 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:59:25,781 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:59:25,820 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:59:25,853 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:59:25,871 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 08:59:25,962 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 09:14:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5585)
+[2015-10-20 09:14:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5751)
+[2015-10-20 09:14:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5754)
+[2015-10-20 09:14:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5755)
+2015-10-20 09:15:00,243 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:15:00,244 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:15:00,311 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:15:00,391 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 09:15:52 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5763)
+[2015-10-20 09:15:52 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5756)
+2015-10-20 09:15:52,661 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:15:52,717 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 09:27:33 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5999)
+[2015-10-20 09:27:33 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5749)
+[2015-10-20 09:27:33 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5752)
+2015-10-20 09:27:34,052 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:27:34,078 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:27:34,173 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5760)
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5761)
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5762)
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5584)
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6008)
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6009)
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6104)
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6105)
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6106)
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6000)
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6001)
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6002)
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5750)
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5753)
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5757)
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5758)
+[2015-10-20 09:51:05 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:5759)
+2015-10-20 09:51:06,052 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:51:06,105 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:51:06,112 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:51:06,185 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:51:06,294 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:51:06,394 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:51:06,484 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:51:06,530 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:51:06,532 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:51:06,582 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:51:06,594 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:51:06,606 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:51:06,608 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:51:06,608 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:51:06,632 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:51:06,657 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:51:06,657 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6317)
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6318)
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6319)
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6320)
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6321)
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6322)
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6323)
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6324)
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6325)
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6326)
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6327)
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6328)
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6329)
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6330)
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6331)
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6332)
+[2015-10-20 09:58:08 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6333)
+2015-10-20 09:58:08,748 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:58:08,761 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:58:08,782 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:58:08,874 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:58:09,004 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:58:09,020 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:58:09,132 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:58:09,201 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:58:09,258 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:58:09,281 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:58:09,302 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:58:09,337 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:58:09,340 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:58:09,349 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:58:09,367 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:58:09,382 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 09:58:09,392 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6402)
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6403)
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6404)
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6405)
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6406)
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6407)
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6408)
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6409)
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6410)
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6411)
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6412)
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6413)
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6414)
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6415)
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6416)
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6417)
+[2015-10-20 10:06:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6418)
+2015-10-20 10:06:59,955 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 10:06:59,962 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 10:06:59,976 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 10:07:00,172 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 10:07:00,272 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 10:07:00,275 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 10:07:00,282 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 10:07:00,289 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 10:07:00,320 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 10:07:00,345 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 10:07:00,386 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 10:07:00,414 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 10:07:00,438 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 10:07:00,466 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 10:07:00,492 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 10:07:00,512 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 10:07:00,544 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6498)
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6499)
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6500)
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6501)
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6502)
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6503)
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6504)
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6505)
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6506)
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6507)
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6508)
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6509)
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6510)
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6511)
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6512)
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6513)
+[2015-10-20 11:13:34 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6514)
+2015-10-20 11:13:35,353 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 11:13:35,355 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 11:13:35,356 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 11:13:35,366 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 11:13:35,367 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 11:13:35,455 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 11:13:35,555 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 11:13:35,623 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 11:13:35,672 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 11:13:35,697 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 11:13:35,700 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 11:13:35,741 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 11:13:35,793 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 11:13:35,808 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 11:13:35,831 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 11:13:35,881 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 11:13:35,931 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6923)
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6924)
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6925)
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6926)
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6927)
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6928)
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6929)
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6930)
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6931)
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6932)
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6933)
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6934)
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6935)
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6936)
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6937)
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6938)
+[2015-10-20 12:08:14 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:6939)
+2015-10-20 12:08:15,020 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 12:08:15,047 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 12:08:15,119 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 12:08:15,123 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 12:08:15,129 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 12:08:15,232 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 12:08:15,395 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 12:08:15,426 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 12:08:15,431 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 12:08:15,444 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 12:08:15,444 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 12:08:15,446 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 12:08:15,456 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 12:08:15,473 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 12:08:15,481 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 12:08:15,501 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 12:08:15,520 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 12:21:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7051)
+2015-10-20 12:21:04,717 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 12:21:51 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7058)
+2015-10-20 12:21:51,978 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 14:01:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7046)
+[2015-10-20 14:01:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7050)
+[2015-10-20 14:01:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7052)
+[2015-10-20 14:01:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7053)
+[2015-10-20 14:01:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7054)
+[2015-10-20 14:01:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7055)
+[2015-10-20 14:01:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7056)
+[2015-10-20 14:01:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7057)
+[2015-10-20 14:01:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7059)
+[2015-10-20 14:01:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7060)
+[2015-10-20 14:01:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7119)
+[2015-10-20 14:01:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7121)
+2015-10-20 14:01:26,368 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 14:01:26,406 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 14:01:26,502 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 14:01:26,512 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 14:01:26,546 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 14:01:26,586 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 14:01:26,594 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 14:01:26,601 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 14:01:26,614 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 14:01:26,658 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 14:01:26,667 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 14:01:26,699 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7638)
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7047)
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7048)
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7049)
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7630)
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7629)
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7632)
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7633)
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7634)
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7635)
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7636)
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7061)
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7062)
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7639)
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7631)
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7628)
+[2015-10-20 15:43:38 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:7637)
+2015-10-20 15:43:38,945 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 15:43:38,955 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 15:43:38,985 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 15:43:39,018 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 15:43:39,026 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 15:43:39,096 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 15:43:39,105 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 15:43:39,173 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 15:43:39,300 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 15:43:39,349 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 15:43:39,353 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 15:43:39,356 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 15:43:39,361 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 15:43:39,381 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 15:43:39,383 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 15:43:39,399 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 15:43:39,425 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8032)
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8033)
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8035)
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8036)
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8037)
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8038)
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8039)
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8040)
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8041)
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8042)
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8043)
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8044)
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8045)
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8046)
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8047)
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8048)
+[2015-10-20 16:21:17 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8049)
+2015-10-20 16:21:18,131 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 16:21:18,164 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 16:21:18,197 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 16:21:18,285 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 16:21:18,302 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 16:21:18,346 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 16:21:18,382 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 16:21:18,394 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 16:21:18,419 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 16:21:18,479 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 16:21:18,517 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 16:21:18,518 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 16:21:18,561 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 16:21:18,577 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 16:21:18,598 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 16:21:18,622 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 16:21:18,646 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8128)
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8129)
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8130)
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8131)
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8132)
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8133)
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8134)
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8135)
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8118)
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8119)
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8120)
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8121)
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8122)
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8124)
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8125)
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8126)
+[2015-10-20 17:33:22 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8127)
+2015-10-20 17:33:23,207 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 17:33:23,265 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 17:33:23,290 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 17:33:23,306 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 17:33:23,380 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 17:33:23,464 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 17:33:23,720 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 17:33:23,770 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 17:33:23,934 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 17:33:24,019 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 17:33:24,038 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 17:33:24,076 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 17:33:24,135 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 17:33:24,140 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 17:33:24,143 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 17:33:24,153 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 17:33:24,157 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8411)
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8412)
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8413)
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8414)
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8415)
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8416)
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8417)
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8418)
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8419)
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8420)
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8421)
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8422)
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8423)
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8424)
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8425)
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8426)
+[2015-10-20 20:19:07 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8427)
+2015-10-20 20:19:07,791 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 20:19:07,792 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 20:19:07,896 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 20:19:07,999 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 20:19:08,041 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 20:19:08,130 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 20:19:08,149 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 20:19:08,191 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 20:19:08,264 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 20:19:08,325 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 20:19:08,414 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 20:19:08,447 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 20:19:08,506 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 20:19:08,559 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 20:19:08,569 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 20:19:08,570 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 20:19:08,606 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8989)
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8990)
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8991)
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8993)
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8994)
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8995)
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8996)
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8997)
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8998)
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:8999)
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9000)
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9001)
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9002)
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9003)
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9004)
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9005)
+[2015-10-20 21:35:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9006)
+2015-10-20 21:35:38,850 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 21:35:38,857 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 21:35:38,962 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 21:35:39,015 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 21:35:39,176 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 21:35:39,178 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 21:35:39,228 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 21:35:39,269 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 21:35:39,341 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 21:35:39,369 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 21:35:39,412 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 21:35:39,469 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 21:35:39,539 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 21:35:39,595 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 21:35:39,631 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 21:35:39,657 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 21:35:39,709 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9024)
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9025)
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9026)
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9010)
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9011)
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9012)
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9013)
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9014)
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9015)
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9016)
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9017)
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9018)
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9019)
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9020)
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9021)
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9022)
+[2015-10-20 23:23:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9023)
+2015-10-20 23:23:45,183 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 23:23:45,234 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 23:23:45,281 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 23:23:45,352 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 23:23:45,393 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 23:23:45,472 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 23:23:45,543 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 23:23:45,948 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 23:23:46,017 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 23:23:46,144 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 23:23:46,148 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 23:23:46,207 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 23:23:46,229 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 23:23:46,324 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 23:23:46,353 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 23:23:46,399 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-20 23:23:46,443 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9029)
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9030)
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9031)
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9032)
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9033)
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9034)
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9035)
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9036)
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9037)
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9038)
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9039)
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9040)
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9041)
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9042)
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9043)
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9044)
+[2015-10-21 01:11:49 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9045)
+2015-10-21 01:11:51,225 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 01:11:51,267 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 01:11:51,356 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 01:11:51,439 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 01:11:51,479 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 01:11:51,532 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 01:11:51,611 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 01:11:51,647 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 01:11:51,677 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 01:11:51,751 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 01:11:51,840 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 01:11:51,891 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 01:11:51,912 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 01:11:51,915 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 01:11:51,986 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 01:11:52,041 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 01:11:52,073 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9056)
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9057)
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9058)
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9059)
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9060)
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9061)
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9062)
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9063)
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9064)
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9065)
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9066)
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9067)
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9051)
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9052)
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9053)
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9054)
+[2015-10-21 02:59:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9055)
+2015-10-21 02:59:54,769 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 02:59:54,782 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 02:59:54,891 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 02:59:54,946 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 02:59:54,958 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 02:59:55,029 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 02:59:55,136 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 02:59:55,178 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 02:59:55,247 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 02:59:55,344 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 02:59:55,370 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 02:59:55,395 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 02:59:55,467 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 02:59:55,527 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 02:59:55,582 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 02:59:55,604 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 02:59:55,605 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9089)
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9090)
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9074)
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9075)
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9076)
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9077)
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9078)
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9079)
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9080)
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9081)
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9082)
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9083)
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9084)
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9085)
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9086)
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9087)
+[2015-10-21 04:47:59 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9088)
+2015-10-21 04:47:59,467 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 04:47:59,479 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 04:47:59,484 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 04:47:59,637 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 04:47:59,771 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 04:47:59,854 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 04:47:59,859 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 04:47:59,927 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 04:48:00,064 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 04:48:00,073 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 04:48:00,076 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 04:48:00,119 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 04:48:00,173 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 04:48:00,221 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 04:48:00,224 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 04:48:00,250 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 04:48:00,262 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9121)
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9122)
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9123)
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9124)
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9125)
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9126)
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9095)
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9096)
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9097)
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9130)
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9127)
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9132)
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9131)
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9134)
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9133)
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9128)
+[2015-10-21 06:03:45 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9129)
+2015-10-21 06:03:46,047 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 06:03:46,049 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 06:03:46,059 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 06:03:46,154 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 06:03:46,268 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 06:03:46,313 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 06:03:46,350 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 06:03:46,934 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 06:03:47,031 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 06:03:47,090 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 06:03:47,153 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 06:03:47,163 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 06:03:47,233 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 06:03:47,257 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 06:03:47,279 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 06:03:47,303 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 06:03:47,344 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9152)
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9153)
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9154)
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9138)
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9139)
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9140)
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9141)
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9142)
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9143)
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9144)
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9145)
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9146)
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9147)
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9148)
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9149)
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9150)
+[2015-10-21 07:04:31 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9151)
+2015-10-21 07:04:31,892 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:04:31,900 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:04:31,929 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:04:32,002 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:04:32,081 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:04:32,173 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:04:32,347 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:04:32,367 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:04:32,413 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:04:32,423 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:04:32,441 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:04:32,445 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:04:32,472 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:04:32,481 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:04:32,500 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:04:32,528 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:04:32,550 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9158)
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9159)
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9160)
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9161)
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9162)
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9163)
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9164)
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9165)
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9166)
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9167)
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9168)
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9169)
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9170)
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9171)
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9172)
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9173)
+[2015-10-21 07:55:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9157)
+2015-10-21 07:55:24,701 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:55:24,706 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:55:24,716 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:55:24,719 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:55:24,745 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:55:24,877 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:55:24,951 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:55:24,956 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:55:26,574 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:55:26,602 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:55:26,613 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:55:26,638 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:55:26,665 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:55:26,688 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:55:26,691 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:55:26,722 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 07:55:26,744 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9184)
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9185)
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9186)
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9187)
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9188)
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9189)
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9190)
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9191)
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9192)
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9176)
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9177)
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9178)
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9179)
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9180)
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9181)
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9182)
+[2015-10-21 08:33:04 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9183)
+2015-10-21 08:33:04,391 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:33:04,520 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:33:04,542 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:33:04,674 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:33:04,738 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:33:04,886 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:33:04,895 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:33:04,961 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:33:05,030 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:33:05,100 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:33:05,147 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:33:05,204 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:33:05,244 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:33:05,248 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:33:05,274 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:33:05,323 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:33:05,344 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 08:49:27 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9198)
+[2015-10-21 08:49:27 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9199)
+[2015-10-21 08:49:27 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9200)
+[2015-10-21 08:49:27 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9201)
+[2015-10-21 08:49:27 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9202)
+[2015-10-21 08:49:27 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9203)
+[2015-10-21 08:49:27 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9204)
+[2015-10-21 08:49:27 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9205)
+[2015-10-21 08:49:27 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9206)
+[2015-10-21 08:49:27 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9207)
+[2015-10-21 08:49:27 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9208)
+[2015-10-21 08:49:27 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9209)
+[2015-10-21 08:49:27 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9210)
+[2015-10-21 08:49:27 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9211)
+[2015-10-21 08:49:27 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9212)
+[2015-10-21 08:49:27 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9213)
+2015-10-21 08:49:27,991 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:49:28,076 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:49:28,109 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:49:28,270 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:49:28,382 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:49:28,414 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:49:28,420 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:49:28,445 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:49:28,490 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:49:28,492 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:49:28,503 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:49:28,508 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:49:28,531 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:49:28,553 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:49:28,555 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 08:49:28,573 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9306)
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9307)
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9308)
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9309)
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9310)
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9311)
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9312)
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9313)
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9314)
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9315)
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9316)
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9317)
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9318)
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9319)
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9320)
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9321)
+[2015-10-21 10:01:20 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9197)
+2015-10-21 10:01:21,580 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 10:01:21,635 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 10:01:21,637 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 10:01:21,639 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 10:01:21,647 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 10:01:21,649 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 10:01:21,665 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 10:01:21,691 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 10:01:21,743 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 10:01:21,772 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 10:01:21,790 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 10:01:21,804 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 10:01:21,804 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 10:01:21,839 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 10:01:21,870 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 10:01:21,891 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 10:01:21,895 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9984)
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9985)
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9986)
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9987)
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9988)
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9990)
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9991)
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9974)
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9975)
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9976)
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9977)
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9978)
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9979)
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9980)
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9981)
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9982)
+[2015-10-21 11:27:25 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:9983)
+2015-10-21 11:27:26,695 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 11:27:26,695 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 11:27:26,747 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 11:27:26,764 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 11:27:26,764 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 11:27:26,770 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 11:27:26,781 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 11:27:26,782 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 11:27:26,792 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 11:27:26,799 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 11:27:26,802 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 11:27:26,815 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 11:27:26,816 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 11:27:26,824 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 11:27:26,826 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 11:27:26,829 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 11:27:26,845 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10524)
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10525)
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10526)
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10527)
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10528)
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10529)
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10530)
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10531)
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10532)
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10533)
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10534)
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10535)
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10536)
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10537)
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10538)
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10539)
+[2015-10-21 12:32:21 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10523)
+2015-10-21 12:32:22,457 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 12:32:22,538 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 12:32:22,542 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 12:32:22,544 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 12:32:22,570 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 12:32:22,570 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 12:32:22,575 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 12:32:22,600 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 12:32:22,603 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 12:32:22,604 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 12:32:22,609 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 12:32:22,627 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 12:32:22,635 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 12:32:22,639 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 12:32:22,643 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 12:32:22,660 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 12:32:22,665 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10816)
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10817)
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10800)
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10801)
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10802)
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10803)
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10804)
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10805)
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10806)
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10807)
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10808)
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10809)
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10810)
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10812)
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10813)
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10814)
+[2015-10-21 13:21:24 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10815)
+2015-10-21 13:21:25,166 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:21:25,278 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:21:25,380 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:21:25,401 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:21:25,476 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:21:25,515 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:21:25,605 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:21:25,691 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:21:25,783 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:21:25,809 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:21:25,828 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:21:25,869 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:21:25,926 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:21:25,993 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:21:26,030 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:21:26,072 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:21:26,148 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10858)
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10859)
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10860)
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10861)
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10862)
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10863)
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10864)
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10865)
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10866)
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10867)
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10868)
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10869)
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10870)
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10871)
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10872)
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10873)
+[2015-10-21 13:24:03 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10874)
+2015-10-21 13:24:04,160 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:24:04,194 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:24:04,217 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:24:04,333 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:24:04,354 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:24:04,410 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:24:04,526 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:24:04,537 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:24:04,579 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:24:04,595 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:24:04,628 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:24:04,637 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:24:04,683 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:24:04,747 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:24:04,792 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:24:04,827 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 13:24:04,838 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10881)
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10882)
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10883)
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10884)
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10885)
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10886)
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10887)
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10888)
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10889)
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10890)
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10891)
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10892)
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10876)
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10877)
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10878)
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10879)
+[2015-10-21 15:29:42 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10880)
+2015-10-21 15:29:42,932 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 15:29:43,019 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 15:29:43,102 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 15:29:43,163 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 15:29:43,194 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 15:29:43,195 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 15:29:43,261 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 15:29:43,372 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 15:29:43,423 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 15:29:43,454 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 15:29:43,454 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 15:29:43,458 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 15:29:43,459 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 15:29:43,477 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 15:29:43,500 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 15:29:43,506 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 15:29:43,511 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10913)
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10914)
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10915)
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10917)
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10918)
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10919)
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10920)
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10921)
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10922)
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10923)
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10924)
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10925)
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10926)
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10927)
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10928)
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10929)
+[2015-10-21 16:46:54 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:10930)
+2015-10-21 16:46:55,464 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 16:46:55,495 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 16:46:55,495 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 16:46:55,510 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 16:46:55,632 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 16:46:55,721 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 16:46:55,767 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 16:46:55,775 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 16:46:55,786 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 16:46:55,794 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 16:46:55,826 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 16:46:55,855 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 16:46:55,907 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 16:46:55,916 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 16:46:55,924 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 16:46:55,929 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 16:46:55,957 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11330)
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11331)
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11332)
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11333)
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11334)
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11335)
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11336)
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11337)
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11338)
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11339)
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11340)
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11341)
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11342)
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11343)
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11344)
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11345)
+[2015-10-21 18:15:48 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11346)
+2015-10-21 18:15:49,436 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 18:15:49,459 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 18:15:49,494 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 18:15:49,501 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 18:15:49,508 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 18:15:49,584 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 18:15:49,692 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 18:15:49,754 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 18:15:49,764 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 18:15:49,766 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 18:15:49,766 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 18:15:49,810 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 18:15:49,843 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 18:15:49,859 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 18:15:49,867 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 18:15:49,877 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 18:15:49,889 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11427)
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11428)
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11429)
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11430)
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11431)
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11432)
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11433)
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11434)
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11435)
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11436)
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11437)
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11438)
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11439)
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11440)
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11441)
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11442)
+[2015-10-21 20:10:36 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11443)
+2015-10-21 20:10:37,426 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:10:37,429 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:10:37,430 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:10:37,435 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:10:37,449 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:10:37,464 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:10:37,588 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:10:37,665 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:10:37,685 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:10:37,702 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:10:37,758 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:10:37,851 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:10:37,870 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:10:37,933 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:10:37,987 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:10:38,016 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:10:38,021 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11716)
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11717)
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11718)
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11719)
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11720)
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11721)
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11722)
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11723)
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11724)
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11725)
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11726)
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11727)
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11728)
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11729)
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11730)
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11731)
+[2015-10-21 20:16:37 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11732)
+2015-10-21 20:16:38,220 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:16:38,232 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:16:38,335 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:16:38,385 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:16:38,499 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:16:38,534 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:16:38,545 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:16:38,571 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:16:38,662 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:16:38,710 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:16:38,715 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:16:38,753 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:16:38,837 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:16:38,903 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:16:38,961 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:16:38,997 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:16:39,022 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11743)
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11744)
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11745)
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11747)
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11748)
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11749)
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11750)
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11751)
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11752)
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11753)
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11754)
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11755)
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11756)
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11757)
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11758)
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11759)
+[2015-10-21 20:21:44 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11742)
+2015-10-21 20:21:45,069 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:21:45,097 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:21:45,102 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:21:45,103 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:21:45,108 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:21:45,115 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:21:45,121 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:21:45,123 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:21:45,156 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:21:45,169 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:21:45,183 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:21:45,187 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:21:45,194 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:21:45,198 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:21:45,207 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:21:45,224 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:21:45,225 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11776)
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11760)
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11761)
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11762)
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11763)
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11764)
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11765)
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11766)
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11767)
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11768)
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11769)
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11770)
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11771)
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11772)
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11773)
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11774)
+[2015-10-21 20:55:19 -0700] [5135] [CRITICAL] WORKER TIMEOUT (pid:11775)
+2015-10-21 20:55:20,599 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:55:20,610 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:55:20,616 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:55:20,620 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:55:20,633 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:55:20,634 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:55:20,660 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:55:20,707 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:55:20,767 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:55:20,801 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:55:20,809 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:55:20,815 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:55:20,838 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:55:20,866 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:55:20,883 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:55:20,892 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-21 20:55:20,921 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:12,639 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:12,694 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:12,703 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:12,813 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:12,891 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:12,931 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:12,994 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:13,083 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:13,183 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:13,286 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:13,306 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:13,376 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:13,423 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:13,482 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:13,536 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:13,579 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 18:53:13,655 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-24 20:03:47 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22817)
+[2015-10-24 20:03:47 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22805)
+[2015-10-24 20:03:47 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22807)
+[2015-10-24 20:03:47 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22808)
+[2015-10-24 20:03:47 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22814)
+2015-10-24 20:03:47,624 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:03:47,625 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:03:47,635 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:03:47,689 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:03:47,717 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22816)
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:23968)
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:23970)
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:23971)
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:23972)
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:23969)
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22801)
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22802)
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22803)
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22804)
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22806)
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22809)
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22810)
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22811)
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22812)
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22813)
+[2015-10-24 20:37:51 -0700] [22797] [CRITICAL] WORKER TIMEOUT (pid:22815)
+2015-10-24 20:37:52,671 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:37:52,672 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:37:52,672 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:37:52,675 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:37:52,678 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:37:52,682 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:37:52,695 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:37:52,738 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:37:52,739 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:37:52,742 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:37:52,776 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:37:52,833 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:37:52,846 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:37:52,852 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:37:52,854 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:37:52,863 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
+2015-10-24 20:37:52,885 /Users/robstlouis/Virtualenvs/RePsiTurk/lib/python2.7/site-packages/psiturk/psiturk_js/psiturk.js
