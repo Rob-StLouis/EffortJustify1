@@ -16,8 +16,9 @@ var pages = [
 	"instructions/instruct-1.html",
 	"instructions/instruct-2.html",
 	"instructions/instruct-3.html",
-	"instructions/instruct-ready.html",
+	//"instructions/instruct-ready.html",
 	"stage.html",
+	"stage2.html",
 	"postquestionnaire.html"
 ];
 
@@ -26,16 +27,28 @@ psiTurk.preloadPages(pages);
 var instructionPages = [ // add as a list as many pages as you like
 	"instructions/instruct-1.html",
 	"instructions/instruct-2.html",
-	"instructions/instruct-3.html",
-	"instructions/instruct-ready.html"
+	"instructions/instruct-3.html"
+	//"instructions/instruct-ready.html"
 ];
 
 var round = 0;
 
-function playgame() {
+window['PhaserGlobal'] = [];
+window['PhaserGlobal'].disableAudio = true;
 
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+
+
+
+
+function playgame() {
 	psiTurk.showPage('stage.html');
+
+
+
+
+	var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+
+
 
 function preload() {
 
@@ -57,6 +70,8 @@ var cursors;
 var stars;
 var score = 0;
 var scoreText;
+
+	var p= [.2,.5,.8,.2,.5,.9,.1,.2,.8];
 
 
 
@@ -110,6 +125,9 @@ function create() {
 //    ledge = platforms.create(-150, 250, 'ground');
 //    ledge.body.immovable = true;
 
+
+
+
 	// The player and its settings
 	player = game.add.sprite(32, game.world.height - 150, 'dude');
 
@@ -135,17 +153,66 @@ function create() {
 //    for (var i = 0; i < 12; i++)
 //    {
 	//  Create a star inside of the 'stars' group
-	var star = stars.create(550, game.world.height - 500, 'star');
+
+	var heightStar = 258;
+	//alert(round);
+
+
+
+	switch (round){
+		case 0:
+			paint = 'mond';
+			scaleP = .25;
+			break;
+		case 1:
+			paint = "poll";
+			scaleP = .15;
+			break;
+		case 2:
+			paint = 'mond';
+			scaleP = .25;
+			break;
+		case 3:
+			paint = "poll";
+			scaleP = .15;
+			break;
+		case 4:
+			paint = 'mond';
+			scaleP = .25;
+			break;
+		case 5:
+			paint = "poll";
+			scaleP = .15;
+			break;
+		case 6:
+			paint = 'mond';
+			scaleP = .25;
+			break;
+		case 7:
+			paint = "poll";
+			scaleP = .15;
+			break;
+		case 8:
+			paint = 'mond';
+			scaleP = .25;
+			break;
+
+	}
+	var star = stars.create(550, game.world.height - heightStar, paint);
+	star.scale.setTo(scaleP,scaleP);
+
+
+
 
 	//  Let gravity do its thing
-	star.body.gravity.y = 300;
+	//star.body.gravity.y = 300;
 
 	//  This just gives each star a slightly random bounce value
-	star.body.bounce.y = 0;
+	//star.body.bounce.y = 0;
 //    }
 
 	//  The score
-	//scoreText = game.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+	scoreText = game.add.text(16, 16, 'Press the right arrow key to move', { fontSize: '32px', fill: '#000' });
 
 	//  Our controls.
 	cursors = game.input.keyboard.createCursorKeys();
@@ -167,9 +234,15 @@ function update() {
 
 	var flapKey = game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
 	flapKey.onDown.add(moveright);
+
+	if(Math.random()>p[round]){
+		var velo = 0;
+	}else{
+		var velo = 1000;
+	}
 //
 	function moveright() {
-		player.body.velocity.x = Math.random()*1000;
+		player.body.velocity.x = velo;
 		player.frame= 6;
 	}
 
@@ -214,7 +287,7 @@ function collectStar (player, star) {
 	// moved on to the experiment. This changes their status code
 	// in the database.
 	//psiTurk.finishInstructions();
-    //
+	//
 	//psiTurk.startTask();
 
 	// Move on to the experiment
@@ -223,8 +296,8 @@ function collectStar (player, star) {
 	star.kill();
 
 	////  Add and update the score
-     //               score += 10;
-     //               scoreText.text = 'Score: ' + score;
+	//               score += 10;
+	//               scoreText.text = 'Score: ' + score;
 
 	//game.paused = true;
 
@@ -236,50 +309,125 @@ function collectStar (player, star) {
 
 	// And a label to illustrate which menu item was chosen. (This is not necessary)
 
-	if(round==0){
 
-		choiseLabel = game.add.text(w/2, h-450, 'You have the chance to buy this painting! How much do you want to bid?', { font: '30px Arial', fill: '#fff' });
-		choiseLabel.anchor.setTo(.5,.5);
-		choiseLabel.wordWrap = true;
-		choiseLabel.wordWrapWidth = 400;
-		optionlabel = game.add.text(w/2, h-150, '$300      $400       $500', { font: '30px Arial', fill: '#fff' });
-		optionlabel.anchor.setTo(.5,.5);
-		mond = game.add.sprite(w/2, h/2, 'mond');
-		mond.anchor.setTo(0.5, 0.5);
-		mond.scale.setTo(0.25,0.25);
+	choiseLabel = game.add.text(w / 2, h - 450, 'You got the painting! How much do you like it?', {
+		font: '30px Arial',
+		fill: '#fff'
+	});
+	choiseLabel.anchor.setTo(.5, .5);
+	choiseLabel.wordWrap = true;
+	choiseLabel.wordWrapWidth = 400;
+	optionlabel1 = game.add.text(w / 2 - 60, h - 150, '1', {font: '30px Arial', fill: '#fff'});
+	optionlabel2 = game.add.text(w / 2 - 30, h - 150, '2', {font: '30px Arial', fill: '#fff'});
+	optionlabel3 = game.add.text(w / 2, h - 150, '3', {font: '30px Arial', fill: '#fff'});
+	optionlabel4 = game.add.text(w / 2 + 30, h - 150, '4', {font: '30px Arial', fill: '#fff'});
+	optionlabel5 = game.add.text(w / 2 + 60, h - 150, '5', {font: '30px Arial', fill: '#fff'});
+	//not sure what this does
+	//optionlabel1.anchor.setTo(.5,.5);
+	//optionlabel2.anchor.setTo(.5,.5);
+	//optionlabel3.anchor.setTo(.5,.5);
+	//optionlabel4.anchor.setTo(.5,.5);
+	//optionlabel5.anchor.setTo(.5,.5);
+	painting = stars.create(w / 2 - 100, h / 2 - 100, paint);
+	//mond.anchor.setTo(0.5, 0.5);
+	painting.scale.setTo(scaleP, scaleP);
 
-		optionlabel.inputEnabled = true;
-		optionlabel.events.onInputUp.add(function () {
-
-			currentview = new playgame();
-
-		});
-
-		round = round +1;
+	optionlabel1.inputEnabled = true;
+	optionlabel2.inputEnabled = true;
+	optionlabel3.inputEnabled = true;
+	optionlabel4.inputEnabled = true;
+	optionlabel5.inputEnabled = true;
 
 
-	}else {
-		choiseLabel = game.add.text(w / 2, h - 450, 'You found this painting! How much would you like to sell it for?', {
-			font: '30px Arial',
-			fill: '#fff'
-		});
-		choiseLabel.anchor.setTo(.5, .5);
-		choiseLabel.wordWrap = true;
-		choiseLabel.wordWrapWidth = 400;
-		optionlabel = game.add.text(w / 2, h - 150, '$300      $400       $500', {font: '30px Arial', fill: '#fff'});
-		optionlabel.anchor.setTo(.5, .5);
-		mond = game.add.sprite(w / 2, h / 2, 'poll');
-		mond.anchor.setTo(0.5, 0.5);
-		mond.scale.setTo(0.15, 0.15);
+	//need to add a way to record the score.
 
-		optionlabel.inputEnabled = true;
-		optionlabel.events.onInputUp.add(function () {
+	optionlabel1.events.onInputUp.add(function () {
 
+
+		if (round === 8) {
 			currentview = new Questionnaire();
 
+		} else {
+			currentview = new playgame();
+		}
 
-		});
-	}
+	});
+
+	optionlabel2.events.onInputUp.add(function () {
+
+		if (round === 8) {
+			currentview = new Questionnaire();
+
+		} else {
+			currentview = new playgame();
+		}
+
+	});
+
+	optionlabel3.events.onInputUp.add(function () {
+
+		if (round === 8) {
+			currentview = new Questionnaire();
+
+		} else {
+			currentview = new playgame();
+		}
+
+	});
+
+	optionlabel4.events.onInputUp.add(function () {
+
+		if (round === 8) {
+			currentview = new Questionnaire();
+
+		} else {
+			currentview = new playgame();
+		}
+
+	});
+
+	optionlabel5.events.onInputUp.add(function () {
+
+		if (round === 8) {
+			currentview = new Questionnaire();
+
+		} else {
+			currentview = new playgame();
+		}
+
+
+	});
+
+
+
+	round = round + 1;
+}
+
+
+}
+
+
+	//else {
+	//	choiseLabel = game.add.text(w / 2, h - 450, 'You found this painting! How much would you like to sell it for?', {
+	//		font: '30px Arial',
+	//		fill: '#fff'
+	//	});
+	//	choiseLabel.anchor.setTo(.5, .5);
+	//	choiseLabel.wordWrap = true;
+	//	choiseLabel.wordWrapWidth = 400;
+	//	optionlabel = game.add.text(w / 2, h - 150, '$300      $400       $500', {font: '30px Arial', fill: '#fff'});
+	//	optionlabel.anchor.setTo(.5, .5);
+	//	painting = stars.create(w/2 -100, h/2-100, 'mond');
+	//	painting = scale.setTo(0.15, 0.15);
+    //
+	//	optionlabel.inputEnabled = true;
+	//	optionlabel.events.onInputUp.add(function () {
+    //
+	//		currentview = new Questionnaire();
+    //
+    //
+	//	});
+	//}
 
 
 
@@ -293,132 +441,11 @@ function collectStar (player, star) {
 
 
 
-}
+
 
 	//psiTurk.showPage('stage.html');
-}
 
 
-	/********************
-* HTML manipulation
-*
-* All HTML files in the templates directory are requested 
-* from the server when the PsiTurk object is created above. We
-* need code to get those pages from the PsiTurk object and 
-* insert them into the document.
-*
-********************/
-
-/********************
-* STROOP TEST       *
-********************/
-var StroopExperiment = function() {
-
-
-	var wordon, // time word is presented
-	    listening = false;
-
-	// Stimuli for a basic Stroop experiment
-	var stims = [
-			["SHIP", "red", "unrelated"],
-			["MONKEY", "green", "unrelated"],
-			["ZAMBONI", "blue", "unrelated"],
-			["RED", "red", "congruent"],
-			["GREEN", "green", "congruent"],
-			["BLUE", "blue", "congruent"],
-			["GREEN", "red", "incongruent"],
-			["BLUE", "green", "incongruent"],
-			["RED", "blue", "incongruent"]
-		];
-
-	stims = _.shuffle(stims);
-
-	var next = function() {
-		if (stims.length===0) {
-			finish();
-		}
-		else {
-			stim = stims.shift();
-			show_word( stim[0], stim[1] );
-			wordon = new Date().getTime();
-			listening = true;
-			d3.select("#query").html('<p id="prompt">Type "R" for Red, "B" for blue, "G" for green.</p>');
-		}
-	};
-
-	var response_handler = function(e) {
-		if (!listening) return;
-
-		var keyCode = e.keyCode,
-			response;
-
-		switch (keyCode) {
-			case 82:
-				// "R"
-				response="red";
-				break;
-			case 71:
-				// "G"
-				response="green";
-				break;
-			case 66:
-				// "B"
-				response="blue";
-				break;
-			default:
-				response = "";
-				break;
-		}
-		if (response.length>0) {
-			listening = false;
-			var hit = response == stim[1];
-			var rt = new Date().getTime() - wordon;
-
-			psiTurk.recordTrialData({'phase':"TEST",
-                                     'word':stim[0],
-                                     'color':stim[1],
-                                     'relation':stim[2],
-                                     'response':response,
-                                     'hit':hit,
-                                     'rt':rt}
-                                   );
-			remove_word();
-			next();
-		}
-	};
-
-	var finish = function() {
-	    $("body").unbind("keydown", response_handler); // Unbind keys
-	    currentview = new Questionnaire();
-	};
-
-	var show_word = function(text, color) {
-		d3.select("#stim")
-			.append("div")
-			.attr("id","word")
-			.style("color",color)
-			.style("text-align","center")
-			.style("font-size","150px")
-			.style("font-weight","400")
-			.style("margin","20px")
-			.text(text);
-	};
-
-	var remove_word = function() {
-		d3.select("#word").remove();
-	};
-
-
-	// Load the stage.html snippet into the body of the page
-	psiTurk.showPage('stage.html');
-
-	// Register the response handler that is defined above to handle any
-	// key down events.
-	$("body").focus().keydown(response_handler);
-
-	// Start the test
-	next();
-};
 
 
 /****************
