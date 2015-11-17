@@ -71,7 +71,7 @@ var stars;
 var score = 0;
 var scoreText;
 
-	var p= [.2,.5,.8,.2,.5,.9,.1,.2,.8];
+	var p= [1,1,1,.2,.5,.9,.1,.2,.8];
 
 
 
@@ -310,13 +310,14 @@ function collectStar (player, star) {
 	// And a label to illustrate which menu item was chosen. (This is not necessary)
 
 
-	choiseLabel = game.add.text(w / 2, h - 450, 'You got the painting! How much do you like it?', {
+	choiceLabel = game.add.text(w/2, h - 440, 'You got the painting! How much do you like it?', {
 		font: '30px Arial',
 		fill: '#fff'
 	});
-	choiseLabel.anchor.setTo(.5, .5);
-	choiseLabel.wordWrap = true;
-	choiseLabel.wordWrapWidth = 400;
+	choiceLabel.anchor.setTo(.5, .5);
+	choiceLabel.wordWrap = true;
+	choiceLabel.wordWrapWidth = 400;
+	optionlabelInst = game.add.text(w / 4 , h - 180, 'Please click on a number below', {font: '30px Arial', fill: '#fff'});
 	optionlabel1 = game.add.text(w / 2 - 60, h - 150, '1', {font: '30px Arial', fill: '#fff'});
 	optionlabel2 = game.add.text(w / 2 - 30, h - 150, '2', {font: '30px Arial', fill: '#fff'});
 	optionlabel3 = game.add.text(w / 2, h - 150, '3', {font: '30px Arial', fill: '#fff'});
@@ -343,57 +344,106 @@ function collectStar (player, star) {
 
 	optionlabel1.events.onInputUp.add(function () {
 
+		optionlabel1 = game.add.text(w / 2 - 60, h - 150, '1', {font: '30px Arial', fill: '#000'});
 
-		if (round === 8) {
-			currentview = new Questionnaire();
 
-		} else {
-			currentview = new playgame();
-		}
+
+
+		setTimeout(function() {
+
+
+			if (round === 8) {
+				currentview = new Questionnaire();
+
+			} else {
+				currentview = new playgame();
+			}
+
+		},500)
 
 	});
 
+
 	optionlabel2.events.onInputUp.add(function () {
 
-		if (round === 8) {
-			currentview = new Questionnaire();
+		optionlabel2 = game.add.text(w / 2 - 30, h - 150, '2', {font: '30px Arial', fill: '#000'});
 
-		} else {
-			currentview = new playgame();
-		}
 
+
+
+		setTimeout(function() {
+
+
+			if (round === 8) {
+				currentview = new Questionnaire();
+
+			} else {
+				currentview = new playgame();
+			}
+
+		},500)
 	});
 
 	optionlabel3.events.onInputUp.add(function () {
 
-		if (round === 8) {
-			currentview = new Questionnaire();
 
-		} else {
-			currentview = new playgame();
-		}
+		optionlabel3 = game.add.text(w / 2 , h - 150, '3', {font: '30px Arial', fill: '#000'});
+
+
+
+
+		setTimeout(function() {
+
+
+			if (round === 8) {
+				currentview = new Questionnaire();
+
+			} else {
+				currentview = new playgame();
+			}
+
+		},500)
 
 	});
 
 	optionlabel4.events.onInputUp.add(function () {
 
-		if (round === 8) {
-			currentview = new Questionnaire();
 
-		} else {
-			currentview = new playgame();
-		}
 
+		optionlabel4 = game.add.text(w / 2 + 30, h - 150, '4', {font: '30px Arial', fill: '#000'});
+
+
+
+
+		setTimeout(function() {
+
+
+			if (round === 8) {
+				currentview = new Questionnaire();
+
+			} else {
+				currentview = new playgame();
+			}
+
+		},500)
 	});
 
 	optionlabel5.events.onInputUp.add(function () {
 
-		if (round === 8) {
-			currentview = new Questionnaire();
+		optionlabel5 = game.add.text(w / 2 + 60, h - 150, '5', {font: '30px Arial', fill: '#000'});
 
-		} else {
-			currentview = new playgame();
-		}
+
+		setTimeout(function() {
+
+
+			if (round === 8) {
+				currentview = new Questionnaire();
+
+			} else {
+				currentview = new playgame();
+			}
+
+		},500)
 
 
 	});
