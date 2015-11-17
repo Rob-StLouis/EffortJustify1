@@ -71,7 +71,7 @@ var stars;
 var score = 0;
 var scoreText;
 
-	var p= [1,1,1,.2,.5,.9,.1,.2,.8];
+var p= [.2,.5,.8,.2,.5,.9,.1,.2,.8];
 
 
 
