@@ -221,7 +221,7 @@ var scoreText;
 //    }
 
 	// instructions
-	instruct_text = game.add.text(16, 16, 'Press the right arrow key to move', { fontSize: '32px', fill: '#000' });
+	instruct_text = game.add.text(16, 16, 'Press the right arrow key to move right', { fontSize: '32px', fill: '#000' });
 
 
 	score_text =  game.add.text(16, 45, 'Score: $'+score, { fontSize: '32px', fill: '#000' });
@@ -964,7 +964,7 @@ function playgame2() {
 //    }
 
 		// instructions
-		instruct_text = game.add.text(16, 16, 'Press the right arrow key to move', { fontSize: '32px', fill: '#000' });
+		instruct_text = game.add.text(16, 16, 'Press the right arrow key to move right', { fontSize: '32px', fill: '#000' });
 
 
 		//score_text =  game.add.text(16, 45, 'Score: $'+score, { fontSize: '32px', fill: '#000' });
@@ -1107,14 +1107,14 @@ function playgame2() {
 		console.log(paint1);
 
 
-		choiceLabel = game.add.text(w / 2, h - 440, 'How much do you think this paiting is worth?', {
+		choiceLabel = game.add.text(w / 2, h - 440, 'How much do you think this painting is worth?', {
 			font: '30px Arial',
 			fill: '#fff'
 		});
 		choiceLabel.anchor.setTo(.5, .5);
 		choiceLabel.wordWrap = true;
 		choiceLabel.wordWrapWidth = 400;
-		optionlabelInst = game.add.text(w / 4, h - 180, 'Please click on a number below', {
+		optionlabelInst = game.add.text(w / 4, h - 180, 'Please select a number below', {
 			font: '30px Arial',
 			fill: '#fff'
 		});
