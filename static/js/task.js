@@ -20,15 +20,17 @@ var pages = [
 	"stage.html",
 	"stage2.html",
 	"stage3.html",
+	"MidInstructions.html",
 	"postquestionnaire.html"
 ];
 
 psiTurk.preloadPages(pages);
 
 var instructionPages = [ // add as a list as many pages as you like
-	"instructions/instruct-1.html",
-	"instructions/instruct-2.html",
+	//"instructions/instruct-1.html",
+	//"instructions/instruct-2.html",
 	"instructions/instruct-3.html"
+
 	//"instructions/instruct-ready.html"
 ];
 
@@ -85,14 +87,17 @@ var score = 0;
 var scoreText;
 	var allow_restart;
 
-	var time_remaining = 15;
+	var time_remaining = 60;
 	var round = 0;
 
+	var gameover = true;
 
 
-var p= [.9,.9,.9,.9,.9,.9,.1,.2,.8];
 
-	var value = [100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500];
+
+	var p= [.9,.3,.5,.9,.9,.9,.9,.2,.8,.9,.9,.9,.2,.2,.8,.9,.9,.2,.2,.8];
+
+	var value = [100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500];
 
 
 
@@ -237,7 +242,7 @@ var p= [.9,.9,.9,.9,.9,.9,.1,.2,.8];
 
 
 		paintValue = value.shift();
-		alert(value);
+		//alert(value);
 		paint_label =  game.add.text(600, 300, '$'+paintValue, { fontSize: '32px', fill: '#000' });
 
 
@@ -272,7 +277,7 @@ var p= [.9,.9,.9,.9,.9,.9,.1,.2,.8];
 
 		if(allow_restart){
 			wait_screen();
-			console.log("pressed");
+			//console.log("pressed");
 			allow_restart=false;
 		}else{
 			//console.log(allow_restart);
@@ -289,7 +294,7 @@ var p= [.9,.9,.9,.9,.9,.9,.1,.2,.8];
 	function moveright() {
 		player.body.velocity.x = velo;
 		player.frame= 6;
-		console.log(allow_restart);
+		//console.log(allow_restart);
 	}
 
 	if (cursors.left.isDown)
@@ -313,6 +318,14 @@ var p= [.9,.9,.9,.9,.9,.9,.1,.2,.8];
 
 		player.frame = 4;
 	}
+
+
+		if (time_remaining===0) {
+			if (gameover ===true) {
+				currentview = new Questionnaire();
+				gameover =false;
+			}
+		}
 
 }
 
@@ -508,7 +521,7 @@ var p= [.9,.9,.9,.9,.9,.9,.1,.2,.8];
 
 
 			//round = round + 1;
-			alert(round);
+			//alert(round);
 
 
 
@@ -576,7 +589,7 @@ var p= [.9,.9,.9,.9,.9,.9,.1,.2,.8];
 
 		round = round + 1;
 
-		console.log(round);
+		//console.log(round);
 
 		star.destroy();
 
@@ -743,7 +756,14 @@ var p= [.9,.9,.9,.9,.9,.9,.1,.2,.8];
 
 		}else{
 
-			currentview = new Questionnaire();
+			//setTimeout(function () {
+			//	//alert("repeatingW");
+			//	counter();
+            //
+			//}, 1000);
+            //
+			//currentview = new Questionnaire();
+
 
 
 
@@ -811,13 +831,17 @@ function playgame2() {
 	var scoreText;
 	var allow_restart;
 
+	var checkpaint;
+
 	var time_remaining = 15;
 
+	var paint1;
 
 
-	var p= [.9,.9,.9,.9,.9,.9,.1,.2,.8];
 
-	var value = [100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500];
+	var p= [.9,.2,.5,.9,.9,.9,.2,.2,.8,.9,.9,.9,.2,.2,.8];
+
+	var value = [100,400,300,100,500,100,400,300,100,500,100,400,300,100,500];
 
 
 
@@ -887,45 +911,45 @@ function playgame2() {
 
 		switch (round){
 			case 0:
-				paint = 'mond';
-				scaleP = .25;
+				paint1 = 'mond';
+				scaleP1 = .25;
 				break;
-			case 1:
-				paint = "poll";
-				scaleP = .15;
-				break;
-			case 2:
-				paint = 'mond';
-				scaleP = .25;
-				break;
-			case 3:
-				paint = "poll";
-				scaleP = .15;
-				break;
-			case 4:
-				paint = 'mond';
-				scaleP = .25;
-				break;
-			case 5:
-				paint = "poll";
-				scaleP = .15;
-				break;
-			case 6:
-				paint = 'mond';
-				scaleP = .25;
-				break;
-			case 7:
-				paint = "poll";
-				scaleP = .15;
-				break;
-			case 8:
-				paint = 'mond';
-				scaleP = .25;
-				break;
+			//case 1:
+			//	paint = "poll";
+			//	scaleP = .15;
+			//	break;
+			//case 2:
+			//	paint = 'mond';
+			//	scaleP = .25;
+			//	break;
+			//case 3:
+			//	paint = "poll";
+			//	scaleP = .15;
+			//	break;
+			//case 4:
+			//	paint = 'mond';
+			//	scaleP = .25;
+			//	break;
+			//case 5:
+			//	paint = "poll";
+			//	scaleP = .15;
+			//	break;
+			//case 6:
+			//	paint = 'mond';
+			//	scaleP = .25;
+			//	break;
+			//case 7:
+			//	paint = "poll";
+			//	scaleP = .15;
+			//	break;
+			//case 8:
+			//	paint = 'mond';
+			//	scaleP = .25;
+			//	break;
 
 		}
-		star = stars.create(550, game.world.height - heightStar, paint);
-		star.scale.setTo(scaleP,scaleP);
+		star = stars.create(550, game.world.height - heightStar, paint1);
+		star.scale.setTo(scaleP1,scaleP1);
 
 
 
@@ -943,7 +967,7 @@ function playgame2() {
 		instruct_text = game.add.text(16, 16, 'Press the right arrow key to move', { fontSize: '32px', fill: '#000' });
 
 
-		score_text =  game.add.text(16, 45, 'Score: $'+score, { fontSize: '32px', fill: '#000' });
+		//score_text =  game.add.text(16, 45, 'Score: $'+score, { fontSize: '32px', fill: '#000' });
 
 
 
@@ -953,6 +977,8 @@ function playgame2() {
 		cursors = game.input.keyboard.createCursorKeys();
 
 		allow_restart = true;
+
+		console.log("S"+paint1)
 
 
 
@@ -966,6 +992,11 @@ function playgame2() {
 		game.physics.arcade.collide(player, platforms);
 		game.physics.arcade.collide(stars, platforms);
 		game.physics.arcade.collide(platforms, platforms);
+
+
+		if(checkpaint !== paint1){
+			console.log(paint1+" "+checkpaint);
+		}
 
 		//  Checks to see if the player overlaps with any of the stars, if he does call the collectStar function
 
@@ -989,8 +1020,8 @@ function playgame2() {
 		//		console.log("pressed");
 		//		allow_restart=false;
 		//	}else{
-		//		//console.log(allow_restart);
-		//	}
+		//		//conso
+
         //
 		//}, this);
 
@@ -1003,7 +1034,7 @@ function playgame2() {
 		function moveright() {
 			player.body.velocity.x = velo;
 			player.frame= 6;
-			console.log(allow_restart);
+			//console.log(allow_restart);
 		}
 
 		if (cursors.left.isDown)
@@ -1072,6 +1103,9 @@ function playgame2() {
 
 		// And a label to illustrate which menu item was chosen. (This is not necessary)
 
+		console.log("CollectStar:"+round);
+		console.log(paint1);
+
 
 		choiceLabel = game.add.text(w / 2, h - 440, 'How much do you think this paiting is worth?', {
 			font: '30px Arial',
@@ -1095,9 +1129,9 @@ function playgame2() {
 		//optionlabel3.anchor.setTo(.5,.5);
 		//optionlabel4.anchor.setTo(.5,.5);
 		//optionlabel5.anchor.setTo(.5,.5);
-		painting = stars.create(w / 2 - 100, h / 2 - 100, paint);
+		painting = stars.create(w / 2 - 100, h / 2 - 100, paint1);
 		//mond.anchor.setTo(0.5, 0.5);
-		painting.scale.setTo(scaleP, scaleP);
+		painting.scale.setTo(scaleP1, scaleP1);
 
 		optionlabel1.inputEnabled = true;
 		optionlabel2.inputEnabled = true;
@@ -1222,7 +1256,7 @@ function playgame2() {
 
 
 		//round = round + 1;
-		alert(round);
+		//alert(round);
 
 
 
@@ -1290,7 +1324,6 @@ function playgame2() {
 
 		round = round + 1;
 
-		console.log(round);
 
 		star.destroy();
 
@@ -1299,50 +1332,56 @@ function playgame2() {
 
 		switch (round) {
 			case 0:
-				paint = 'mond';
-				scaleP = .25;
+				paint1 = 'mond';
+				scaleP1 = .25;
 				break;
 			case 1:
-				paint = "poll";
-				scaleP = .15;
+				paint1 = "poll";
+				scaleP1 = .15;
 				break;
 			case 2:
-				paint = 'mond';
-				scaleP = .25;
+				paint1 = 'mond';
+				scaleP1 = .25;
 				break;
 			case 3:
-				paint = "poll";
-				scaleP = .15;
+				paint1 = "poll";
+				scaleP1 = .15;
 				break;
 			case 4:
-				paint = 'mond';
-				scaleP = .25;
+				paint1 = 'mond';
+				scaleP1 = .25;
 				break;
 			case 5:
-				paint = "poll";
-				scaleP = .15;
+				paint1 = "poll";
+				scaleP1 = .15;
 				break;
 			case 6:
-				paint = 'mond';
-				scaleP = .25;
+				paint1 = 'mond';
+				scaleP1 = .25;
 				break;
 			case 7:
-				paint = "poll";
-				scaleP = .15;
+				paint1 = "poll";
+				scaleP1 = .15;
 				break;
 			case 8:
-				paint = 'mond';
-				scaleP = .25;
+				paint1 = 'mond';
+				scaleP1 = .25;
 				break;
 
 		}
+
+		console.log("Update:"+round);
+		console.log(paint1);
+
+		checkpaint = paint1;
+
 
 		setTimeout(function () {
 			allow_restart = true;
 		}, 300);
 
-		star = stars.create(550, game.world.height - heightStar, paint);
-		star.scale.setTo(scaleP, scaleP);
+		star = stars.create(550, game.world.height - heightStar, paint1);
+		star.scale.setTo(scaleP1, scaleP1);
 
 		paintValue = value.shift();
 		//alert(paintValue);
@@ -1401,7 +1440,7 @@ var Questionnaire = function() {
 			psiTurk.recordUnstructuredData(this.id, this.value);
 		});
 		$('select').each( function(i, val) {
-			psiTurk.recordUnstructuredData(this.id, this.value);		
+			psiTurk.recordUnstructuredData(this.id, this.value);
 		});
 
 	};
@@ -1414,30 +1453,35 @@ var Questionnaire = function() {
 	resubmit = function() {
 		replaceBody("<h1>Trying to resubmit...</h1>");
 		reprompt = setTimeout(prompt_resubmit, 10000);
-		
+
 		psiTurk.saveData({
 			success: function() {
-			    clearInterval(reprompt); 
-                psiTurk.computeBonus('compute_bonus', function(){finish()}); 
-			}, 
+			    clearInterval(reprompt);
+                psiTurk.computeBonus('compute_bonus', function(){finish()});
+			},
 			error: prompt_resubmit
 		});
 	};
 
 	// Load the questionnaire snippet 
-	psiTurk.showPage('postquestionnaire.html');
+	psiTurk.showPage('MidInstructions.html');
 	psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'begin'});
+
+
+	//alert("pressed2")
 	
 	$("#next").click(function () {
-	    record_responses();
+	    //record_responses();
+        //alert("pressed1");
 		currentview = playgame2();
-	    //psiTurk.saveData({
-         //   success: function(){
-         //       psiTurk.computeBonus('compute_bonus', function() {
-         //       	psiTurk.completeHIT(); // when finished saving compute bonus, the quit
-         //       });
-         //   },
-         //   error: prompt_resubmit});
+		//alert("pressed");
+	    psiTurk.saveData({
+            success: function(){
+                //psiTurk.computeBonus('compute_bonus', function() {
+                //	psiTurk.completeHIT(); // when finished saving compute bonus, the quit
+                //});
+            },
+            error: prompt_resubmit});
 	});
     
 	
