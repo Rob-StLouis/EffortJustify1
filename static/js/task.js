@@ -87,7 +87,7 @@ var score = 0;
 var scoreText;
 	var allow_restart;
 
-	var time_remaining = 60;
+	var time_remaining = 240;
 	var round = 0;
 
 	var gameover = true;
@@ -95,9 +95,16 @@ var scoreText;
 
 
 
-	var p= [.9,.3,.5,.9,.9,.9,.9,.2,.8,.9,.9,.9,.2,.2,.8,.9,.9,.2,.2,.8];
+	var p= [.9,.3,.5,.9,.9,.9,.9,.2,.8,.9,.9,.9,.2,.2,.8,.9,.9,.2,.2,.8,
+		.9,.3,.5,.9,.9,.9,.9,.2,.8,.9,.9,.9,.2,.2,.8,.9,.9,.2,.2,.8,
+		.9,.3,.5,.9,.9,.9,.9,.2,.8,.9,.9,.9,.2,.2,.8,.9,.9,.2,.2,.8,
+		.9,.3,.5,.9,.9,.9,.9,.2,.8,.9,.9,.9,.2,.2,.8,.9,.9,.2,.2,.8];
 
-	var value = [100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500];
+	var value = [100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500,
+		100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500,
+		100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500,
+		100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500,
+		100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500];
 
 
 
@@ -165,7 +172,7 @@ var scoreText;
 
 
 
-	switch (round){
+	switch (round % 2){
 		case 0:
 			paint = 'mond';
 			scaleP = .25;
@@ -174,35 +181,35 @@ var scoreText;
 			paint = "poll";
 			scaleP = .15;
 			break;
-		case 2:
-			paint = 'mond';
-			scaleP = .25;
-			break;
-		case 3:
-			paint = "poll";
-			scaleP = .15;
-			break;
-		case 4:
-			paint = 'mond';
-			scaleP = .25;
-			break;
-		case 5:
-			paint = "poll";
-			scaleP = .15;
-			break;
-		case 6:
-			paint = 'mond';		counter();
-
-			scaleP = .25;
-			break;
-		case 7:
-			paint = "poll";
-			scaleP = .15;
-			break;
-		case 8:
-			paint = 'mond';
-			scaleP = .25;
-			break;
+		//case 2:
+		//	paint = 'mond';
+		//	scaleP = .25;
+		//	break;
+		//case 3:
+		//	paint = "poll";
+		//	scaleP = .15;
+		//	break;
+		//case 4:
+		//	paint = 'mond';
+		//	scaleP = .25;
+		//	break;
+		//case 5:
+		//	paint = "poll";
+		//	scaleP = .15;
+		//	break;
+		//case 6:
+		//	paint = 'mond';
+        //
+		//	scaleP = .25;
+		//	break;
+		//case 7:
+		//	paint = "poll";
+		//	scaleP = .15;
+		//	break;
+		//case 8:
+		//	paint = 'mond';
+		//	scaleP = .25;
+		//	break;
 
 	}
 	star = stars.create(550, game.world.height - heightStar, paint);
@@ -222,12 +229,15 @@ var scoreText;
 
 	// instructions
 	instruct_text = game.add.text(16, 16, 'Press the right arrow key to move right', { fontSize: '32px', fill: '#000' });
+		skip_instruct_text= game.add.text(16,45,"Press 's' to skip this level", { fontSize: '100px', fill: '#000' });
 
 
-	score_text =  game.add.text(16, 45, 'Score: $'+score, { fontSize: '32px', fill: '#000' });
+
+
+		score_text =  game.add.text(16, 75, 'Score: $'+score, { fontSize: '32px', fill: '#000' });
 	//v_text = game.add.text(600, 300, '#300', {font: '30px Arial', fill: '#000'});
 
-		time_remaining_text= game.add.text(16,70,"Time Remaining: "+time_remaining+" seconds", { fontSize: '100px', fill: '#000' });
+		time_remaining_text= game.add.text(16,105,"Time Remaining: "+time_remaining+" seconds", { fontSize: '100px', fill: '#000' });
 
 		counter();
 
@@ -665,7 +675,7 @@ var scoreText;
 
 
 		score_text.destroy();
-		score_text =  game.add.text(16, 45, 'Score: $'+score, { fontSize: '32px', fill: '#000' });
+		score_text =  game.add.text(16, 75, 'Score: $'+score, { fontSize: '32px', fill: '#000' });
 
 
 
@@ -744,7 +754,7 @@ var scoreText;
 		if (time_remaining>0){
 			time_remaining = time_remaining -1;
 			time_remaining_text.destroy();
-			time_remaining_text= game.add.text(16,70,"Time Remaining: "+time_remaining+" seconds", { fontSize: '100px', fill: '#000' });
+			time_remaining_text= game.add.text(16,105,"Time Remaining: "+time_remaining+" seconds", { fontSize: '100px', fill: '#000' });
 
 
 			setTimeout(function () {
