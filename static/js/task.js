@@ -71,8 +71,10 @@ function preload() {
 	game.load.image('star', '/static/assets/castle.png ');
 	game.load.image('mond','/static/assets/mondrian.jpg ' );
 	game.load.image('poll','/static/assets/pollock.jpg ' );
-	game.load.spritesheet('dude', '/static/assets/dude.png', 32, 48);
+	game.load.spritesheet('dude','/static/assets/dude.png ', 32, 48);
 
+
+	game.load.image('pic1','/static/assets/pic1.BMP' );game.load.image('pic2','/static/assets/pic2.BMP' );game.load.image('pic3','/static/assets/pic3.BMP' );game.load.image('pic4','/static/assets/pic4.BMP' );game.load.image('pic5','/static/assets/pic5.BMP' );game.load.image('pic6','/static/assets/pic6.BMP' );game.load.image('pic7','/static/assets/pic7.BMP' );game.load.image('pic8','/static/assets/pic8.BMP' );game.load.image('pic9','/static/assets/pic9.BMP' );game.load.image('pic10','/static/assets/pic10.BMP' );game.load.image('pic11','/static/assets/pic11.BMP' );game.load.image('pic12','/static/assets/pic12.BMP' );game.load.image('pic13','/static/assets/pic13.BMP' );game.load.image('pic14','/static/assets/pic14.BMP' );game.load.image('pic15','/static/assets/pic15.BMP' );game.load.image('pic16','/static/assets/pic16.BMP' );game.load.image('pic17','/static/assets/pic17.BMP' );game.load.image('pic18','/static/assets/pic18.BMP' );game.load.image('pic19','/static/assets/pic19.BMP' );game.load.image('pic20','/static/assets/pic20.BMP' );game.load.image('pic21','/static/assets/pic21.BMP' );game.load.image('pic22','/static/assets/pic22.BMP' );game.load.image('pic23','/static/assets/pic23.BMP' );game.load.image('pic24','/static/assets/pic24.BMP' );game.load.image('pic25','/static/assets/pic25.BMP' );game.load.image('pic26','/static/assets/pic26.BMP' );game.load.image('pic27','/static/assets/pic27.BMP' );game.load.image('pic28','/static/assets/pic28.BMP' );game.load.image('pic29','/static/assets/pic29.BMP' );game.load.image('pic30','/static/assets/pic30.BMP' );game.load.image('pic31','/static/assets/pic31.BMP' );game.load.image('pic32','/static/assets/pic32.BMP' );game.load.image('pic33','/static/assets/pic33.BMP' );game.load.image('pic34','/static/assets/pic34.BMP' );game.load.image('pic35','/static/assets/pic35.BMP' );game.load.image('pic36','/static/assets/pic36.BMP' );game.load.image('pic37','/static/assets/pic37.BMP' );game.load.image('pic38','/static/assets/pic38.BMP' );game.load.image('pic39','/static/assets/pic39.BMP' );game.load.image('pic40','/static/assets/pic40.BMP' );
 	//http://localhost:22362/assets/platform.png
 
 }
@@ -86,11 +88,17 @@ var stars;
 var score = 0;
 var scoreText;
 	var allow_restart;
+	var resultAct;
+	var numberofpresses;
 
 	var time_remaining = 240;
 	var round = 0;
 
 	var gameover = true;
+
+	var lastSecond = false;
+
+	var start_level_time;
 
 
 
@@ -106,9 +114,16 @@ var scoreText;
 		100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500,
 		100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500];
 
+	var paintingtype=[];
+
+	for (i = 1; i < 40; i++) {
+		paintingtype.push(String("pic"+i))
+
+	}
 
 
-	var paintValue = value.push();
+
+		var paintValue = value.push();
 
 
 	//var current_value = value.push();
@@ -172,48 +187,56 @@ var scoreText;
 
 
 
-	switch (round % 2){
-		case 0:
-			paint = 'mond';
-			scaleP = .25;
-			break;
-		case 1:
-			paint = "poll";
-			scaleP = .15;
-			break;
-		//case 2:
-		//	paint = 'mond';
-		//	scaleP = .25;
-		//	break;
-		//case 3:
-		//	paint = "poll";
-		//	scaleP = .15;
-		//	break;
-		//case 4:
-		//	paint = 'mond';
-		//	scaleP = .25;
-		//	break;
-		//case 5:
-		//	paint = "poll";
-		//	scaleP = .15;
-		//	break;
-		//case 6:
-		//	paint = 'mond';
-        //
-		//	scaleP = .25;
-		//	break;
-		//case 7:
-		//	paint = "poll";
-		//	scaleP = .15;
-		//	break;
-		//case 8:
-		//	paint = 'mond';
-		//	scaleP = .25;
-		//	break;
+	//switch (round % 2){
+	//	case 0:
+	//		paint = 'mond';
+	//		scaleP = .25;
+	//		break;
+	//	case 1:
+	//		paint = "poll";
+	//		scaleP = .15;
+	//		break;
+	//	//case 2:
+	//	//	paint = 'mond';
+	//	//	scaleP = .25;
+	//	//	break;
+	//	//case 3:
+	//	//	paint = "poll";
+	//	//	scaleP = .15;
+	//	//	break;
+	//	//case 4:
+	//	//	paint = 'mond';
+	//	//	scaleP = .25;
+	//	//	break;
+	//	//case 5:
+	//	//	paint = "poll";
+	//	//	scaleP = .15;
+	//	//	break;
+	//	//case 6:
+	//	//	paint = 'mond';
+     //   //
+	//	//	scaleP = .25;
+	//	//	break;
+	//	//case 7:
+	//	//	paint = "poll";
+	//	//	scaleP = .15;
+	//	//	break;
+	//	//case 8:
+	//	//	paint = 'mond';
+	//	//	scaleP = .25;
+	//	//	break;
+    //
+	//}
 
-	}
+		scaleP = .75;
+
+
+		paint = paintingtype.shift();
+
 	star = stars.create(550, game.world.height - heightStar, paint);
 	star.scale.setTo(scaleP,scaleP);
+
+		numberofpresses = 0;
 
 
 
@@ -229,7 +252,9 @@ var scoreText;
 
 	// instructions
 	instruct_text = game.add.text(16, 16, 'Press the right arrow key to move right', { fontSize: '32px', fill: '#000' });
-		skip_instruct_text= game.add.text(16,45,"Press 's' to skip this level", { fontSize: '100px', fill: '#000' });
+		skip_instruct_text= game.add.text(16,45,"Press 's' to skip this room", { fontSize: '100px', fill: '#000' });
+
+
 
 
 
@@ -257,6 +282,10 @@ var scoreText;
 
 
 
+		start_level_time = new Date().getTime()
+
+
+
 	}
 
 
@@ -279,7 +308,14 @@ var scoreText;
 	player.body.velocity.x = 0;
 
 	var flapKey = game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
-	flapKey.onDown.add(moveright);
+	flapKey.onUp.add(moveright);
+
+		dontIncrement = true;
+
+		var flapKey2 = game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
+		flapKey2.onDown.add(showright);
+
+		dontIncrement = true;
 
 
 	var skipGame = game.input.keyboard.addKey(Phaser.Keyboard.S);
@@ -288,12 +324,24 @@ var scoreText;
 		if(allow_restart){
 			wait_screen();
 			//console.log("pressed");
+			resultAct = "skipped";
 			allow_restart=false;
+
+
 		}else{
 			//console.log(allow_restart);
 		}
 
 	}, this);
+
+		var skipSection = game.input.keyboard.addKey(Phaser.Keyboard.X);
+		skipSection.onDown.add(function () {
+
+			currentview = new Questionnaire();
+
+
+
+		}, this);
 
 	if(Math.random()>p[round]){
 		var velo = 0;
@@ -302,36 +350,70 @@ var scoreText;
 	}
 //
 	function moveright() {
-		player.body.velocity.x = velo;
-		player.frame= 6;
-		//console.log(allow_restart);
-	}
 
-	if (cursors.left.isDown)
-	{
-		//  Move to the left
-//        player.body.velocity.x = -5;
-//
-//        player.animations.play('left');
-	}
-	else if (cursors.right.isDown)
-	{
-		//  Move to the right
-//        player.body.velocity.x = 5;
-//
-//        player.animations.play('right');
-	}
-	else
-	{
-		//  Stand still
-		player.animations.stop();
 
+		if(lastSecond=="down"){
+			dontIncrement=false;
+			player.body.velocity.x = velo;
+			player.frame= 6;
+			//console.log(allow_restart)
+			numberofpresses +=1;
+			dontIncrement=true;
+			lastSecond = "up";
+
+		}
 		player.frame = 4;
 	}
+
+		function showright() {
+			//dontIncrement=false;
+			//player.body.velocity.x = velo;
+			player.frame= 6;
+			//console.log(allow_restart)
+			//numberofpresses +=1;
+			//dontIncrement=true;
+			lastSecond = "down";
+
+		}
+
+
+
+//	if (cursors.left.isDown)
+//	{
+//		//  Move to the left
+////        player.body.velocity.x = -5;
+////
+////        player.animations.play('left');
+//	}
+//	else if (cursors.right.isDown)
+//	{
+//		//  Move to the right
+////        player.body.velocity.x = 5;
+////
+////        player.animations.play('right');
+//	}
+//	else
+//	{
+//		//  Stand still
+//
+//        //
+//		;
+//	}
+
+
+
+		//player.animations.stop();
 
 
 		if (time_remaining===0) {
 			if (gameover ===true) {
+
+				var endtime = new Date().getTime();
+				var rt = start_level_time-endtime;
+
+
+				psiTurk.recordTrialData({'result':"sectionEnd", 'numpressess':numberofpresses,'diff':p[round], 'value':paintValue,'painting':paint,"rt":rt});
+
 				currentview = new Questionnaire();
 				gameover =false;
 			}
@@ -343,203 +425,203 @@ var scoreText;
 
 
 
-	function collectStar (player, star) {
-
-
-
-			// Removes the star from the screen
-
-			//$('.continue').unbind('click.psiturk.instructionsnav.next');
-			//$('.previous').unbind('click.psiturk.instructionsnav.prev');
-
-			// Record that the user has finished the instructions and
-			// moved on to the experiment. This changes their status code
-			// in the database.
-			//psiTurk.finishInstructions();
-			//
-			//psiTurk.startTask();
-
-			// Move on to the experiment
-
-			player.kill();
-			star.kill();
-
-
-			//  Add and update the score
-			//               score += current_value;
-			//               score_text.text = 'Score: $' + score;
-
-			//current_value = value.push();
-
-			//game.paused = true;
-
-			var w = 800, h = 600;
-
-			// Then add the menu
-			//menu = game.add.sprite(w/2, h/2, 'menu');
-			//menu.anchor.setTo(0.5, 0.5);
-
-			// And a label to illustrate which menu item was chosen. (This is not necessary)
-
-
-			choiceLabel = game.add.text(w / 2, h - 440, 'You got the painting! How much do you like it?', {
-				font: '30px Arial',
-				fill: '#fff'
-			});
-			choiceLabel.anchor.setTo(.5, .5);
-			choiceLabel.wordWrap = true;
-			choiceLabel.wordWrapWidth = 400;
-			optionlabelInst = game.add.text(w / 4, h - 180, 'Please click on a number below', {
-				font: '30px Arial',
-				fill: '#fff'
-			});
-			optionlabel1 = game.add.text(w / 2 - 60, h - 150, '1', {font: '30px Arial', fill: '#fff'});
-			optionlabel2 = game.add.text(w / 2 - 30, h - 150, '2', {font: '30px Arial', fill: '#fff'});
-			optionlabel3 = game.add.text(w / 2, h - 150, '3', {font: '30px Arial', fill: '#fff'});
-			optionlabel4 = game.add.text(w / 2 + 30, h - 150, '4', {font: '30px Arial', fill: '#fff'});
-			optionlabel5 = game.add.text(w / 2 + 60, h - 150, '5', {font: '30px Arial', fill: '#fff'});
-			//not sure what this does
-			//optionlabel1.anchor.setTo(.5,.5);
-			//optionlabel2.anchor.setTo(.5,.5);
-			//optionlabel3.anchor.setTo(.5,.5);
-			//optionlabel4.anchor.setTo(.5,.5);
-			//optionlabel5.anchor.setTo(.5,.5);
-			painting = stars.create(w / 2 - 100, h / 2 - 100, paint);
-			//mond.anchor.setTo(0.5, 0.5);
-			painting.scale.setTo(scaleP, scaleP);
-
-			optionlabel1.inputEnabled = true;
-			optionlabel2.inputEnabled = true;
-			optionlabel3.inputEnabled = true;
-			optionlabel4.inputEnabled = true;
-			optionlabel5.inputEnabled = true;
-
-			allow_restart = false;
-
-
-			//need to add a way to record the score.
-
-			optionlabel1.events.onInputUp.add(function () {
-
-				optionlabel1.destroy();
-
-				optionlabel1 = game.add.text(w / 2 - 60, h - 150, '1', {font: '30px Arial', fill: '#000'});
-
-
-				setTimeout(function () {
-
-
-					if (round === 8) {
-						currentview = new Questionnaire();
-
-					} else {
-						clear_text();
-						RecreateGame();
-					}
-
-				}, 500)
-
-			});
-
-
-			optionlabel2.events.onInputUp.add(function () {
-
-				optionlabel2.destroy();
-
-				optionlabel2 = game.add.text(w / 2 - 30, h - 150, '2', {font: '30px Arial', fill: '#000'});
-
-
-				setTimeout(function () {
-
-
-					if (round === 8) {
-						currentview = new Questionnaire();
-
-					} else {
-						clear_text();
-						RecreateGame();
-					}
-
-				}, 500)
-			});
-
-			optionlabel3.events.onInputUp.add(function () {
-
-
-				optionlabel3.destroy();
-				optionlabel3 = game.add.text(w / 2, h - 150, '3', {font: '30px Arial', fill: '#000'});
-
-
-				setTimeout(function () {
-
-
-					if (round === 8) {
-						currentview = new Questionnaire();
-
-					} else {
-						clear_text();
-						RecreateGame();
-					}
-
-				}, 500)
-
-			});
-
-			optionlabel4.events.onInputUp.add(function () {
-
-
-				optionlabel4.destroy();
-				optionlabel4 = game.add.text(w / 2 + 30, h - 150, '4', {font: '30px Arial', fill: '#000'});
-
-
-				setTimeout(function () {
-
-
-					if (round === 8) {
-						currentview = new Questionnaire();
-
-					} else {
-						clear_text();
-						RecreateGame();
-					}
-
-				}, 500)
-			});
-
-			optionlabel5.events.onInputUp.add(function () {
-
-				optionlabel5.destroy();
-
-				optionlabel5 = game.add.text(w / 2 + 60, h - 150, '5', {font: '30px Arial', fill: '#000'});
-
-
-				setTimeout(function () {
-
-
-					if (round === 8) {
-						currentview = new Questionnaire();
-
-					} else {
-						clear_text();
-						RecreateGame();
-					}
-
-				}, 500)
-
-
-			});
-
-
-			//round = round + 1;
-			//alert(round);
-
-
-
-
-
-
-
-}
+//	function collectStar (player, star) {
+//
+//
+//
+//			// Removes the star from the screen
+//
+//			//$('.continue').unbind('click.psiturk.instructionsnav.next');
+//			//$('.previous').unbind('click.psiturk.instructionsnav.prev');
+//
+//			// Record that the user has finished the instructions and
+//			// moved on to the experiment. This changes their status code
+//			// in the database.
+//			//psiTurk.finishInstructions();
+//			//
+//			//psiTurk.startTask();
+//
+//			// Move on to the experiment
+//
+//			player.kill();
+//			star.kill();
+//
+//
+//			//  Add and update the score
+//			//               score += current_value;
+//			//               score_text.text = 'Score: $' + score;
+//
+//			//current_value = value.push();
+//
+//			//game.paused = true;
+//
+//			var w = 800, h = 600;
+//
+//			// Then add the menu
+//			//menu = game.add.sprite(w/2, h/2, 'menu');
+//			//menu.anchor.setTo(0.5, 0.5);
+//
+//			// And a label to illustrate which menu item was chosen. (This is not necessary)
+//
+//
+//			choiceLabel = game.add.text(w / 2, h - 440, 'You got the painting! How much do you like it?', {
+//				font: '30px Arial',
+//				fill: '#fff'
+//			});
+//			choiceLabel.anchor.setTo(.5, .5);
+//			choiceLabel.wordWrap = true;
+//			choiceLabel.wordWrapWidth = 400;
+//			optionlabelInst = game.add.text(w / 4, h - 180, 'Please click on a number below', {
+//				font: '30px Arial',
+//				fill: '#fff'
+//			});
+//			optionlabel1 = game.add.text(w / 2 - 60, h - 150, '1', {font: '30px Arial', fill: '#fff'});
+//			optionlabel2 = game.add.text(w / 2 - 30, h - 150, '2', {font: '30px Arial', fill: '#fff'});
+//			optionlabel3 = game.add.text(w / 2, h - 150, '3', {font: '30px Arial', fill: '#fff'});
+//			optionlabel4 = game.add.text(w / 2 + 30, h - 150, '4', {font: '30px Arial', fill: '#fff'});
+//			optionlabel5 = game.add.text(w / 2 + 60, h - 150, '5', {font: '30px Arial', fill: '#fff'});
+//			//not sure what this does
+//			//optionlabel1.anchor.setTo(.5,.5);
+//			//optionlabel2.anchor.setTo(.5,.5);
+//			//optionlabel3.anchor.setTo(.5,.5);
+//			//optionlabel4.anchor.setTo(.5,.5);
+//			//optionlabel5.anchor.setTo(.5,.5);
+//			painting = stars.create(w / 2 - 100, h / 2 - 100, paint);
+//			//mond.anchor.setTo(0.5, 0.5);
+//			painting.scale.setTo(scaleP, scaleP);
+//
+//			optionlabel1.inputEnabled = true;
+//			optionlabel2.inputEnabled = true;
+//			optionlabel3.inputEnabled = true;
+//			optionlabel4.inputEnabled = true;
+//			optionlabel5.inputEnabled = true;
+//
+//			allow_restart = false;
+//
+//
+//			//need to add a way to record the score.
+//
+//			optionlabel1.events.onInputUp.add(function () {
+//
+//				optionlabel1.destroy();
+//
+//				optionlabel1 = game.add.text(w / 2 - 60, h - 150, '1', {font: '30px Arial', fill: '#000'});
+//
+//
+//				setTimeout(function () {
+//
+//
+//					if (round === 8) {
+//						currentview = new Questionnaire();
+//
+//					} else {
+//						clear_text();
+//						RecreateGame();
+//					}
+//
+//				}, 500)
+//
+//			});
+//
+//
+//			optionlabel2.events.onInputUp.add(function () {
+//
+//				optionlabel2.destroy();
+//
+//				optionlabel2 = game.add.text(w / 2 - 30, h - 150, '2', {font: '30px Arial', fill: '#000'});
+//
+//
+//				setTimeout(function () {
+//
+//
+//					if (round === 8) {
+//						currentview = new Questionnaire();
+//
+//					} else {
+//						clear_text();
+//						RecreateGame();
+//					}
+//
+//				}, 500)
+//			});
+//
+//			optionlabel3.events.onInputUp.add(function () {
+//
+//
+//				optionlabel3.destroy();
+//				optionlabel3 = game.add.text(w / 2, h - 150, '3', {font: '30px Arial', fill: '#000'});
+//
+//
+//				setTimeout(function () {
+//
+//
+//					if (round === 8) {
+//						currentview = new Questionnaire();
+//
+//					} else {
+//						clear_text();
+//						RecreateGame();
+//					}
+//
+//				}, 500)
+//
+//			});
+//
+//			optionlabel4.events.onInputUp.add(function () {
+//
+//
+//				optionlabel4.destroy();
+//				optionlabel4 = game.add.text(w / 2 + 30, h - 150, '4', {font: '30px Arial', fill: '#000'});
+//
+//
+//				setTimeout(function () {
+//
+//
+//					if (round === 8) {
+//						currentview = new Questionnaire();
+//
+//					} else {
+//						clear_text();
+//						RecreateGame();
+//					}
+//
+//				}, 500)
+//			});
+//
+//			optionlabel5.events.onInputUp.add(function () {
+//
+//				optionlabel5.destroy();
+//
+//				optionlabel5 = game.add.text(w / 2 + 60, h - 150, '5', {font: '30px Arial', fill: '#000'});
+//
+//
+//				setTimeout(function () {
+//
+//
+//					if (round === 8) {
+//						currentview = new Questionnaire();
+//
+//					} else {
+//						clear_text();
+//						RecreateGame();
+//					}
+//
+//				}, 500)
+//
+//
+//			});
+//
+//
+//			//round = round + 1;
+//			//alert(round);
+//
+//
+//
+//
+//
+//
+//
+//}
 
 	function clear_text(){
 
@@ -606,45 +688,48 @@ var scoreText;
 
 		var heightStar = 258;
 
-		switch (round) {
-			case 0:
-				paint = 'mond';
-				scaleP = .25;
-				break;
-			case 1:
-				paint = "poll";
-				scaleP = .15;
-				break;
-			case 2:
-				paint = 'mond';
-				scaleP = .25;
-				break;
-			case 3:
-				paint = "poll";
-				scaleP = .15;
-				break;
-			case 4:
-				paint = 'mond';
-				scaleP = .25;
-				break;
-			case 5:
-				paint = "poll";
-				scaleP = .15;
-				break;
-			case 6:
-				paint = 'mond';
-				scaleP = .25;
-				break;
-			case 7:
-				paint = "poll";
-				scaleP = .15;
-				break;
-			case 8:
-				paint = 'mond';
-				scaleP = .25;
-				break;
+		//switch (round) {
+		//	case 0:
+		//		paint = 'mond';
+		//		scaleP = .25;
+		//		break;
+		//	case 1:
+		//		paint = "poll";
+		//		scaleP = .15;
+		//		break;
+		//	case 2:
+		//		paint = 'mond';
+		//		scaleP = .25;
+		//		break;
+		//	case 3:
+		//		paint = "poll";
+		//		scaleP = .15;
+		//		break;
+		//	case 4:
+		//		paint = 'mond';
+		//		scaleP = .25;
+		//		break;
+		//	case 5:
+		//		paint = "poll";
+		//		scaleP = .15;
+		//		break;
+		//	case 6:
+		//		paint = 'mond';
+		//		scaleP = .25;
+		//		break;
+		//	case 7:
+		//		paint = "poll";
+		//		scaleP = .15;
+		//		break;
+		//	case 8:
+		//		paint = 'mond';
+		//		scaleP = .25;
+		//		break;
+        //
+		//}
 
-		}
+		scaleP = .75;
+		paint = paintingtype.shift();
 
 		setTimeout(function () {
 			allow_restart = true;
@@ -659,6 +744,8 @@ var scoreText;
 		paint_label = game.add.text(600, 300, '$'+ paintValue, { fontSize: '32px', fill: '#000' });
 
 		Score_calc();
+
+		numberofpresses=0;
 
 
 
@@ -710,6 +797,8 @@ var scoreText;
 		paint_label.destroy();
 
 		score  = score + paintValue;
+
+		resultAct = "gotPaint";
 		wait_screen()
 	}
 
@@ -745,6 +834,13 @@ var scoreText;
 			RecreateGame();
 
 		}, 3000);
+
+		var endtime = new Date().getTime();
+		var rt = start_level_time-endtime;
+
+
+		psiTurk.recordTrialData({'result':resultAct, 'numpressess':numberofpresses,'diff':p[round], 'value':paintValue,'painting':paint,"rt":rt});
+		numberofpresses=0;
 
 
 	}
@@ -826,6 +922,8 @@ function playgame2() {
 		game.load.image('poll','/static/assets/pollock.jpg ' );
 		game.load.spritesheet('dude', '/static/assets/dude.png', 32, 48);
 
+		game.load.image('pic1','/static/assets/pic1.BMP' );game.load.image('pic2','/static/assets/pic2.BMP' );game.load.image('pic3','/static/assets/pic3.BMP' );game.load.image('pic4','/static/assets/pic4.BMP' );game.load.image('pic5','/static/assets/pic5.BMP' );game.load.image('pic6','/static/assets/pic6.BMP' );game.load.image('pic7','/static/assets/pic7.BMP' );game.load.image('pic8','/static/assets/pic8.BMP' );game.load.image('pic9','/static/assets/pic9.BMP' );
+
 		//http://localhost:22362/assets/platform.png
 
 	}
@@ -849,13 +947,20 @@ function playgame2() {
 
 
 
-	var p= [.9,.2,.5,.9,.9,.9,.2,.2,.8,.9,.9,.9,.2,.2,.8];
+	var p= [.9,.2,.5,.9,.9,.9,.2,.2,.9];
 
-	var value = [100,400,300,100,500,100,400,300,100,500,100,400,300,100,500];
+	var value = [100,400,300,100,500,100,400,300,100];
+
+	var paintingtype=[];
+
+	for (i = 1; i < 40; i++) {
+		paintingtype.push(String("pic"+i))
+
+	}
 
 
 
-	var paintValue = value.push();
+	//var paintValue = value.push();
 
 
 	//var current_value = value.push();
@@ -919,45 +1024,48 @@ function playgame2() {
 
 
 
-		switch (round){
-			case 0:
-				paint1 = 'mond';
-				scaleP1 = .25;
-				break;
-			//case 1:
-			//	paint = "poll";
-			//	scaleP = .15;
-			//	break;
-			//case 2:
-			//	paint = 'mond';
-			//	scaleP = .25;
-			//	break;
-			//case 3:
-			//	paint = "poll";
-			//	scaleP = .15;
-			//	break;
-			//case 4:
-			//	paint = 'mond';
-			//	scaleP = .25;
-			//	break;
-			//case 5:
-			//	paint = "poll";
-			//	scaleP = .15;
-			//	break;
-			//case 6:
-			//	paint = 'mond';
-			//	scaleP = .25;
-			//	break;
-			//case 7:
-			//	paint = "poll";
-			//	scaleP = .15;
-			//	break;
-			//case 8:
-			//	paint = 'mond';
-			//	scaleP = .25;
-			//	break;
+		//switch (round){
+		//	case 0:
+		//		paint1 = 'mond';
+		//		scaleP1 = .25;
+		//		break;
+		//	//case 1:
+		//	//	paint = "poll";
+		//	//	scaleP = .15;
+		//	//	break;
+		//	//case 2:
+		//	//	paint = 'mond';
+		//	//	scaleP = .25;
+		//	//	break;
+		//	//case 3:
+		//	//	paint = "poll";
+		//	//	scaleP = .15;
+		//	//	break;
+		//	//case 4:
+		//	//	paint = 'mond';
+		//	//	scaleP = .25;
+		//	//	break;
+		//	//case 5:
+		//	//	paint = "poll";
+		//	//	scaleP = .15;
+		//	//	break;
+		//	//case 6:
+		//	//	paint = 'mond';
+		//	//	scaleP = .25;
+		//	//	break;
+		//	//case 7:
+		//	//	paint = "poll";
+		//	//	scaleP = .15;
+		//	//	break;
+		//	//case 8:
+		//	//	paint = 'mond';
+		//	//	scaleP = .25;
+		//	//	break;
+        //
+		//}
 
-		}
+		paint1 = paintingtype.shift();
+		scaleP1 = .75;
 		star = stars.create(550, game.world.height - heightStar, paint1);
 		star.scale.setTo(scaleP1,scaleP1);
 
@@ -975,6 +1083,11 @@ function playgame2() {
 
 		// instructions
 		instruct_text = game.add.text(16, 16, 'Press the right arrow key to move right', { fontSize: '32px', fill: '#000' });
+
+
+
+		title_test = game.add.text(16, 46, 'Skipped work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' });
+
 
 
 		//score_text =  game.add.text(16, 45, 'Score: $'+score, { fontSize: '32px', fill: '#000' });
@@ -1018,9 +1131,18 @@ function playgame2() {
 		//  Reset the players velocity (movement)
 		player.body.velocity.x = 0;
 
-		var flapKey = game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
-		flapKey.onDown.add(moveright);
+		//  Reset the players velocity (movement)
+		player.body.velocity.x = 0;
 
+		var flapKey = game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
+		flapKey.onUp.add(moveright);
+
+		dontIncrement = true;
+
+		var flapKey2 = game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
+		flapKey2.onDown.add(showright);
+
+		dontIncrement = true;
 
 		//var skipGame = game.input.keyboard.addKey(Phaser.Keyboard.S);
 		//skipGame.onDown.add(function () {
@@ -1035,6 +1157,15 @@ function playgame2() {
         //
 		//}, this);
 
+		var skipSection = game.input.keyboard.addKey(Phaser.Keyboard.X);
+		skipSection.onDown.add(function () {
+
+			currentview = new Questionnaire2();
+
+
+
+		}, this);
+
 		if(Math.random()>p[round]){
 			var velo = 0;
 		}else{
@@ -1042,9 +1173,30 @@ function playgame2() {
 		}
 //
 		function moveright() {
-			player.body.velocity.x = velo;
+
+
+			if(lastSecond=="down"){
+				dontIncrement=false;
+				player.body.velocity.x = velo;
+				player.frame= 6;
+				//console.log(allow_restart)
+				numberofpresses +=1;
+				dontIncrement=true;
+				lastSecond = "up";
+
+			}
+			player.frame = 4;
+		}
+
+		function showright() {
+			//dontIncrement=false;
+			//player.body.velocity.x = velo;
 			player.frame= 6;
-			//console.log(allow_restart);
+			//console.log(allow_restart)
+			//numberofpresses +=1;
+			//dontIncrement=true;
+			lastSecond = "down";
+
 		}
 
 		if (cursors.left.isDown)
@@ -1079,6 +1231,7 @@ function playgame2() {
 
 
 
+
 		// Removes the star from the screen
 
 		//$('.continue').unbind('click.psiturk.instructionsnav.next');
@@ -1095,6 +1248,9 @@ function playgame2() {
 
 		player.kill();
 		star.kill();
+
+			instruct_text.destroy();
+			title_test.destroy();
 
 
 		//  Add and update the score
@@ -1188,7 +1344,7 @@ function playgame2() {
 
 
 				if (round === 8) {
-					currentview = new Questionnaire2();
+					currentview = new Questionnaire2();s
 
 				} else {
 					clear_text();
@@ -1340,45 +1496,45 @@ function playgame2() {
 
 		var heightStar = 258;
 
-		switch (round) {
-			case 0:
-				paint1 = 'mond';
-				scaleP1 = .25;
-				break;
-			case 1:
-				paint1 = "poll";
-				scaleP1 = .15;
-				break;
-			case 2:
-				paint1 = 'mond';
-				scaleP1 = .25;
-				break;
-			case 3:
-				paint1 = "poll";
-				scaleP1 = .15;
-				break;
-			case 4:
-				paint1 = 'mond';
-				scaleP1 = .25;
-				break;
-			case 5:
-				paint1 = "poll";
-				scaleP1 = .15;
-				break;
-			case 6:
-				paint1 = 'mond';
-				scaleP1 = .25;
-				break;
-			case 7:
-				paint1 = "poll";
-				scaleP1 = .15;
-				break;
-			case 8:
-				paint1 = 'mond';
-				scaleP1 = .25;
-				break;
-
-		}
+		//switch (round) {
+		//	case 0:
+		//		paint1 = 'mond';
+		//		scaleP1 = .25;
+		//		break;
+		//	case 1:
+		//		paint1 = "poll";
+		//		scaleP1 = .15;
+		//		break;
+		//	case 2:
+		//		paint1 = 'mond';
+		//		scaleP1 = .25;
+		//		break;
+		//	case 3:
+		//		paint1 = "poll";
+		//		scaleP1 = .15;
+		//		break;
+		//	case 4:
+		//		paint1 = 'mond';
+		//		scaleP1 = .25;
+		//		break;
+		//	case 5:
+		//		paint1 = "poll";
+		//		scaleP1 = .15;
+		//		break;
+		//	case 6:
+		//		paint1 = 'mond';
+		//		scaleP1 = .25;
+		//		break;
+		//	case 7:
+		//		paint1 = "poll";
+		//		scaleP1 = .15;
+		//		break;
+		//	case 8:
+		//		paint1 = 'mond';
+		//		scaleP1 = .25;
+		//		break;
+		//
+		//}
 
 		console.log("Update:"+round);
 		console.log(paint1);
@@ -1390,14 +1546,24 @@ function playgame2() {
 			allow_restart = true;
 		}, 300);
 
+		paint1 = paintingtype.shift();
+		scaleP1 = .75;
 		star = stars.create(550, game.world.height - heightStar, paint1);
 		star.scale.setTo(scaleP1, scaleP1);
 
-		paintValue = value.shift();
-		//alert(paintValue);
-		paint_label.destroy();
+		//paintValue = value.shift();
+		////alert(paintValue);
+		//paint_label.destroy();
 		//paint_label = game.add.text(600, 300, '$'+ paintValue, { fontSize: '32px', fill: '#000' });
 
+		instruct_text = game.add.text(16, 16, 'Press the right arrow key to move right', { fontSize: '32px', fill: '#000' });
+
+
+
+		title_test = game.add.text(16, 46, 'Skipped work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' });
+
+
+
 
 
 
@@ -1406,18 +1572,21 @@ function playgame2() {
 
 
 
-
-	function  got_painting(){
-
-
-		allow_restart=false;
-		player.kill();
-		star.kill();
-		paint_label.destroy();
-
-		score  = score + paintValue;
-		wait_screen()
-	}
+    //
+	//function  got_painting(){
+    //
+	//	instruct_text.destroy();
+	//	title_test.destroy();
+    //
+    //
+	//	allow_restart=false;
+	//	player.kill();
+	//	star.kill();
+	//	paint_label.destroy();
+    //
+	//	score  = score + paintValue;
+	//	wait_screen()
+	//}
 
 
 
