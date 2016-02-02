@@ -1811,7 +1811,7 @@ var Questionnaire4 = function() {
 		psiTurk.saveData({
 			success: function() {
 				clearInterval(reprompt);
-				psiTurk.computeBonus('compute_bonus', function(){finish()});
+				//psiTurk.computeBonus('compute_bonus', function(){finish()});
 			},
 			error: prompt_resubmit
 		});
@@ -1826,9 +1826,9 @@ var Questionnaire4 = function() {
 		//currentview = playgame2();
 		psiTurk.saveData({
 		   success: function(){
-		       psiTurk.computeBonus('compute_bonus', function() {
+		       //psiTurk.computeBonus('compute_bonus', function() {
 		       	psiTurk.completeHIT(); // when finished saving compute bonus, the quit
-		       });
+		       //});
 		   },
 		   error: prompt_resubmit});
 	});
