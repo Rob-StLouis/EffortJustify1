@@ -1704,7 +1704,7 @@ var Questionnaire2 = function() {
 	};
 
 	// Load the questionnaire snippet
-	psiTurk.showPage('postquestionnaire.html');
+	psiTurk.showPage('postquestionnaire2.html');
 	psiTurk.recordTrialData({'phase':'postquestionnaire1', 'status':'begin'});
 
 	$("#next").click(function () {
@@ -1760,7 +1760,7 @@ var Questionnaire3 = function() {
 	};
 
 	// Load the questionnaire snippet
-	psiTurk.showPage('postquestionnaire3.html');
+	psiTurk.showPage('postquestionnaire.html');
 	psiTurk.recordTrialData({'phase':'postquestionnaire2', 'status':'begin'});
 
 	$("#next").click(function () {
@@ -1788,7 +1788,7 @@ var Questionnaire4 = function() {
 
 	record_responses = function() {
 
-		psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'submit'});
+		psiTurk.recordTrialData({'phase':'postquestionnaire3', 'status':'submit'});
 
 		$('textarea').each( function(i, val) {
 			psiTurk.recordUnstructuredData(this.id, this.value);
@@ -1818,8 +1818,8 @@ var Questionnaire4 = function() {
 	};
 
 	// Load the questionnaire snippet
-	psiTurk.showPage('postquestionnaire2.html');
-	psiTurk.recordTrialData({'phase':'postquestionnaire', 'status':'begin'});
+	psiTurk.showPage('postquestionnaire3.html');
+	psiTurk.recordTrialData({'phase':'postquestionnaire3', 'status':'begin'});
 
 	$("#next").click(function () {
 		record_responses();
