@@ -42,7 +42,7 @@ window['PhaserGlobal'] = [];
 window['PhaserGlobal'].disableAudio = true;
 
 
-
+var gametime = "first";
 
 
 function playgame() {
@@ -93,7 +93,7 @@ var scoreText;
 	var resultAct;
 	var numberofpresses;
 
-	var time_remaining = 240;
+	var time_remaining = 10;
 	var round = 0;
 
 	var gameover = true;
@@ -101,6 +101,7 @@ var scoreText;
 	var lastSecond = false;
 
 	var start_level_time;
+
 
 
 
@@ -117,6 +118,8 @@ var scoreText;
 		100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500];
 
 	var paintingtype=[];
+
+	var notwait = true;
 
 	for (i = 1; i < 40; i++) {
 		paintingtype.push(String("pic"+i))
@@ -261,7 +264,7 @@ var scoreText;
 
 
 
-		score_text =  game.add.text(16, 75, 'Score: $'+score, { fontSize: '32px', fill: '#000' });
+		score_text =  game.add.text(16, 75, 'Score: $'+score, { fontSize: '32px', fill: '#800' });
 	//v_text = game.add.text(600, 300, '#300', {font: '30px Arial', fill: '#000'});
 
 		time_remaining_text= game.add.text(16,105,"Time Remaining: "+time_remaining+" seconds", { fontSize: '100px', fill: '#000' });
@@ -286,6 +289,8 @@ var scoreText;
 
 		start_level_time = new Date().getTime()
 
+		notwait = true;
+
 
 
 	}
@@ -293,6 +298,9 @@ var scoreText;
 
 
 	function update() {
+		if (gametime != "first"){
+			return;
+		}
 
 	//  Collide the player and the stars with the platforms
 	game.physics.arcade.collide(player, platforms);
@@ -353,6 +361,8 @@ var scoreText;
 //
 	function moveright() {
 
+		if(notwait===true){
+
 
 		if(lastSecond=="down"){
 			dontIncrement=false;
@@ -365,6 +375,7 @@ var scoreText;
 
 		}
 		player.frame = 4;
+		}
 	}
 
 		function showright() {
@@ -411,7 +422,8 @@ var scoreText;
 			if (gameover ===true) {
 
 				var endtime = new Date().getTime();
-				var rt = start_level_time-endtime;
+				var rt = endtime-start_level_time;
+				console.log("endgae");
 
 
 				psiTurk.recordTrialData({'result':"sectionEnd", 'numpressess':numberofpresses,'diff':p[round], 'value':paintValue,'painting':paint,"rt":rt});
@@ -750,6 +762,11 @@ var scoreText;
 		numberofpresses=0;
 
 
+		start_level_time = new Date().getTime();
+
+		notwait = true;
+
+
 
 	}
 
@@ -764,7 +781,7 @@ var scoreText;
 
 
 		score_text.destroy();
-		score_text =  game.add.text(16, 75, 'Score: $'+score, { fontSize: '32px', fill: '#000' });
+		score_text =  game.add.text(16, 75, 'Score: $'+score, { fontSize: '32px', fill: '#800' });
 
 
 
@@ -800,12 +817,16 @@ var scoreText;
 
 		score  = score + paintValue;
 
-		resultAct = "gotPaint";
-		wait_screen()
+		resultAct = "gotPaint1";
+		wait_screen();
+
+		Score_calc();
 	}
 
 	function  wait_screen(){
-		//alert("repeatingA");
+
+		notwait = false;
+		alert("repeatingA");
 
 		player.kill();
 		star.kill();
@@ -838,7 +859,7 @@ var scoreText;
 		}, 3000);
 
 		var endtime = new Date().getTime();
-		var rt = start_level_time-endtime;
+		var rt = endtime- start_level_time;
 
 
 		psiTurk.recordTrialData({'result':resultAct, 'numpressess':numberofpresses,'diff':p[round], 'value':paintValue,'painting':paint,"rt":rt});
@@ -959,6 +980,11 @@ function playgame2() {
 		paintingtype.push(String("pic"+i))
 
 	}
+	var numberofpresses=0;
+	var Trial_RT_Start;
+	var Trial_RT_Finish;
+	var rt1;
+	var rt2;
 
 
 
@@ -1103,7 +1129,10 @@ function playgame2() {
 
 		allow_restart = true;
 
-		console.log("S"+paint1)
+		console.log("S"+paint1);
+
+		Trial_RT_Start = new Date().getTime();
+
 
 
 
@@ -1232,6 +1261,17 @@ function playgame2() {
 	function collectStar (player, star) {
 
 
+		Trial_RT_Finish = new Date().getTime();
+
+		rt1 = Trial_RT_Finish - Trial_RT_Start;
+
+		psiTurk.recordTrialData({'result':"GotPainting", 'numpressess':numberofpresses,'diff':p[round], 'value':0,'painting':paint,"rt":rt1});
+
+
+
+		Option_RT_Start = new Date().getTime();
+
+
 
 
 		// Removes the star from the screen
@@ -1275,7 +1315,7 @@ function playgame2() {
 		console.log(paint1);
 
 
-		choiceLabel = game.add.text(w / 2, h - 440, 'How much do you think this painting is worth?', {
+		choiceLabel = game.add.text(w / 2, h - 440, 'What was the value of this skipped painting?', {
 			font: '30px Arial',
 			fill: '#fff'
 		});
@@ -1314,6 +1354,13 @@ function playgame2() {
 
 		optionlabel1.events.onInputUp.add(function () {
 
+			Option_RT_Finish = new Date().getTime();
+			rt2 =  Option_RT_Finish -Option_RT_Start;
+
+
+			psiTurk.recordTrialData({'result':"OptionSelection", 'numpressess':numberofpresses,'diff':p[round], 'value':1,'painting':paint,"rt":rt2});
+
+
 			optionlabel1.destroy();
 
 			optionlabel1 = game.add.text(w / 2 - 180, h - 150, '$100', {font: '30px Arial', fill: '#000'});
@@ -1337,6 +1384,12 @@ function playgame2() {
 
 		optionlabel2.events.onInputUp.add(function () {
 
+			Option_RT_Finish = new Date().getTime();
+			rt2 =  Option_RT_Finish -Option_RT_Start;
+
+			psiTurk.recordTrialData({'result':"OptionSelection", 'numpressess':numberofpresses,'diff':p[round], 'value':2,'painting':paint,"rt":rt2});
+
+
 			optionlabel2.destroy();
 
 			optionlabel2 = game.add.text(w / 2 - 90, h - 150, '$200', {font: '30px Arial', fill: '#000'});
@@ -1357,6 +1410,12 @@ function playgame2() {
 		});
 
 		optionlabel3.events.onInputUp.add(function () {
+
+			Option_RT_Finish = new Date().getTime();
+			rt2 =  Option_RT_Finish -Option_RT_Start;
+
+			psiTurk.recordTrialData({'result':"OptionSelection", 'numpressess':numberofpresses,'diff':p[round], 'value':3,'painting':paint,"rt":rt2});
+
 
 
 			optionlabel3.destroy();
@@ -1380,6 +1439,12 @@ function playgame2() {
 
 		optionlabel4.events.onInputUp.add(function () {
 
+			Option_RT_Finish = new Date().getTime();
+			rt2 =  Option_RT_Finish - Option_RT_Start;
+
+			psiTurk.recordTrialData({'result':"OptionSelection", 'numpressess':numberofpresses,'diff':p[round], 'value':4,'painting':paint,"rt":rt2});
+
+
 
 			optionlabel4.destroy();
 			optionlabel4 = game.add.text(w / 2 + 90, h - 150, '$400', {font: '30px Arial', fill: '#000'});
@@ -1400,6 +1465,13 @@ function playgame2() {
 		});
 
 		optionlabel5.events.onInputUp.add(function () {
+
+			Option_RT_Finish = new Date().getTime();
+			rt2 =  Option_RT_Finish -Option_RT_Start;
+
+
+			psiTurk.recordTrialData({'result':"OptionSelection", 'numpressess':numberofpresses,'diff':p[round], 'value':5,'painting':paint,"rt":rt2});
+
 
 			optionlabel5.destroy();
 
@@ -1562,10 +1634,11 @@ function playgame2() {
 
 
 
-		title_test = game.add.text(16, 46, 'Skipped work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' });
+		title_test = game.add.text(16, 46, 'Skipped work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' })
 
+		numberofpresses = 0;
 
-
+		Trial_RT_Start = new Date().getTime();
 
 
 
@@ -1601,6 +1674,10 @@ function playgame2() {
 
 
 
+
+
+
+
 }
 
 
@@ -1610,6 +1687,8 @@ function playgame2() {
 ****************/
 
 var Questionnaire = function() {
+
+	gametime = "Afterfirst";
 
 	var error_message = "<h1>Oops!</h1><p>Something went wrong submitting your HIT. This might happen if you lose your internet connection. Press the button to resubmit.</p><button id='resubmit'>Resubmit</button>";
 
