@@ -16,6 +16,7 @@ var pages = [
 	"instructions/instruct-1.html",
 	"instructions/instruct-2.html",
 	"instructions/instruct-3.html",
+	"instructions/instruct-3Alt.html",
 	//"instructions/instruct-ready.html",
 	"stage.html",
 	"stage2.html",
@@ -28,13 +29,26 @@ var pages = [
 
 psiTurk.preloadPages(pages);
 
-var instructionPages = [ // add as a list as many pages as you like
-	//"instructions/instruct-1.html",
-	//"instructions/instruct-2.html",
-	"instructions/instruct-3.html"
+if (mycondition==="3"){
+	var instructionPages = [ // add as a list as many pages as you like
+		//"instructions/instruct-1.html",
+		//"instructions/instruct-2.html",
+		"instructions/instruct-3Alt.html"
 
-	//"instructions/instruct-ready.html"
-];
+		//"instructions/instruct-ready.html"
+	];
+
+
+}else {
+
+	var instructionPages = [ // add as a list as many pages as you like
+		//"instructions/instruct-1.html",
+		//"instructions/instruct-2.html",
+		"instructions/instruct-3.html"
+
+		//"instructions/instruct-ready.html"
+	];
+}
 
 
 
@@ -46,6 +60,15 @@ var gametime = "first";
 
 
 function playgame() {
+
+
+	alert(mycondition);
+
+	if (mycondition==="3"){
+
+		currentview = new Questionnaire();
+		return
+	}
 
 
 
@@ -77,8 +100,7 @@ function preload() {
 
 
 	game.load.image('pic1','/static/assets/pic1.BMP' );game.load.image('pic2','/static/assets/pic2.BMP' );game.load.image('pic3','/static/assets/pic3.BMP' );game.load.image('pic4','/static/assets/pic4.BMP' );game.load.image('pic5','/static/assets/pic5.BMP' );game.load.image('pic6','/static/assets/pic6.BMP' );game.load.image('pic7','/static/assets/pic7.BMP' );game.load.image('pic8','/static/assets/pic8.BMP' );game.load.image('pic9','/static/assets/pic9.BMP' );game.load.image('pic10','/static/assets/pic10.BMP' );game.load.image('pic11','/static/assets/pic11.BMP' );game.load.image('pic12','/static/assets/pic12.BMP' );game.load.image('pic13','/static/assets/pic13.BMP' );game.load.image('pic14','/static/assets/pic14.BMP' );game.load.image('pic15','/static/assets/pic15.BMP' );game.load.image('pic16','/static/assets/pic16.BMP' );game.load.image('pic17','/static/assets/pic17.BMP' );game.load.image('pic18','/static/assets/pic18.BMP' );game.load.image('pic19','/static/assets/pic19.BMP' );game.load.image('pic20','/static/assets/pic20.BMP' );game.load.image('pic21','/static/assets/pic21.BMP' );game.load.image('pic22','/static/assets/pic22.BMP' );game.load.image('pic23','/static/assets/pic23.BMP' );game.load.image('pic24','/static/assets/pic24.BMP' );game.load.image('pic25','/static/assets/pic25.BMP' );game.load.image('pic26','/static/assets/pic26.BMP' );game.load.image('pic27','/static/assets/pic27.BMP' );game.load.image('pic28','/static/assets/pic28.BMP' );game.load.image('pic29','/static/assets/pic29.BMP' );game.load.image('pic30','/static/assets/pic30.BMP' );game.load.image('pic31','/static/assets/pic31.BMP' );game.load.image('pic32','/static/assets/pic32.BMP' );game.load.image('pic33','/static/assets/pic33.BMP' );game.load.image('pic34','/static/assets/pic34.BMP' );game.load.image('pic35','/static/assets/pic35.BMP' );game.load.image('pic36','/static/assets/pic36.BMP' );game.load.image('pic37','/static/assets/pic37.BMP' );game.load.image('pic38','/static/assets/pic38.BMP' );game.load.image('pic39','/static/assets/pic39.BMP' );game.load.image('pic40','/static/assets/pic40.BMP' );
-	//http://localhost:22362/assets/platform.png
-
+	game.load.image('pic41','/static/assets/pic41.bmp' );game.load.image('pic42','/static/assets/pic42.bmp' );game.load.image('pic43','/static/assets/pic43.bmp' );game.load.image('pic44','/static/assets/pic44.bmp' );game.load.image('pic45','/static/assets/pic45.bmp' );game.load.image('pic46','/static/assets/pic46.bmp' );game.load.image('pic47','/static/assets/pic47.bmp' );game.load.image('pic48','/static/assets/pic48.bmp' );game.load.image('pic49','/static/assets/pic49.bmp' );game.load.image('pic50','/static/assets/pic50.bmp' );game.load.image('pic51','/static/assets/pic51.bmp' );game.load.image('pic52','/static/assets/pic52.bmp' );game.load.image('pic53','/static/assets/pic53.bmp' );game.load.image('pic54','/static/assets/pic54.bmp' );game.load.image('pic55','/static/assets/pic55.bmp' );game.load.image('pic56','/static/assets/pic56.bmp' );game.load.image('pic57','/static/assets/pic57.bmp' );game.load.image('pic58','/static/assets/pic58.bmp' );game.load.image('pic59','/static/assets/pic59.bmp' );game.load.image('pic60','/static/assets/pic60.bmp' )
 }
 
 var player;
@@ -93,7 +115,7 @@ var scoreText;
 	var resultAct;
 	var numberofpresses;
 
-	var time_remaining = 10;
+	var time_remaining = 240;
 	var round = 0;
 
 	var gameover = true;
@@ -103,38 +125,92 @@ var scoreText;
 	var start_level_time;
 
 
+	psiTurk.recordUnstructuredData("condition",mycondition);
 
 
 
-	var p= [.9,.3,.5,.9,.9,.9,.9,.2,.8,.9,.9,.9,.2,.2,.8,.9,.9,.2,.2,.8,
-		.9,.3,.5,.9,.9,.9,.9,.2,.8,.9,.9,.9,.2,.2,.8,.9,.9,.2,.2,.8,
-		.9,.3,.5,.9,.9,.9,.9,.2,.8,.9,.9,.9,.2,.2,.8,.9,.9,.2,.2,.8,
-		.9,.3,.5,.9,.9,.9,.9,.2,.8,.9,.9,.9,.2,.2,.8,.9,.9,.2,.2,.8];
+	var p1= [.2,.5,.9,.2,.5,.9,.2,.5,.9,.2,.5,.9,
+		     .2,.5,.9,.2,.5,.9,.2,.5,.9,.2,.5,.9,
+		     .2,.5,.9,.2,.5,.9,.2,.5,.9,.2,.5,.9,
+		     .2,.5,.9,.2,.5,.9,.2,.5,.9,.2,.5,.9,
+		     .2,.5,.9,.2,.5,.9,.2,.5,.9,.2,.5,.9];
 
-	var value = [100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500,
-		100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500,
-		100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500,
-		100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500,
-		100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500];
+
+	var value1 = [100,100,100,100,100,100, 100,100,100,100,100,100,
+		          200,200,200,200,200,200, 200,200,200,200,200,200,
+		          300,300,300,300,300,300, 300,300,300,300,300,300,
+		          400,400,400,400,400,400, 400,400,400,400,400,400,
+		          500,500,500,500,500,500, 500,500,500,500,500,500];
+
+
+
+
+
+
+
+
+
+
+	////var p= [.2,.2,.5,.9,.2,.5,.9,.2,.5,.9,.2,.9,.2,.5,.9,.2,.5,.9,.2,.5,
+	////	.9,.3,.5,.9,.9,.9,.9,.2,.8,.9,.9,.9,.2,.2,.8,.9,.9,.2,.2,.8,
+	////	.9,.3,.5,.9,.9,.9,.9,.2,.8,.9,.9,.9,.2,.2,.8,.9,.9,.2,.2,.8,
+	////	.9,.3,.5,.9,.9,.9,.9,.2,.8,.9,.9,.9,.2,.2,.8,.9,.9,.2,.2,.8];
+    //
+	//var value = [100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500,
+	//	100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500,
+	//	100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500,
+	//	100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500,
+	//	100,500,300,100,400,100,400,300,100,500,100,400,300,100,500,100,400,300,100,500];
 
 	var paintingtype=[];
+	var setorder=[];
+
 
 	var notwait = true;
 
-	for (i = 1; i < 40; i++) {
-		paintingtype.push(String("pic"+i))
+	for (i = 1; i < 61; i++) {
+		paintingtype.push(String("pic"+i));
+		setorder.push(i-1);
 
 	}
 
+	setorder = _.shuffle(setorder);
 
 
-		var paintValue = value.push();
+	var p=[];
+	var value=[];
+
+
+	for (i = 0; i < 60; i++) {
+		p.push(p1[setorder[i]]);
+		value.push(value1[setorder[i]]);
+
+
+	}
+
+	paintingtype = _.shuffle(paintingtype);
+
+
+
+
+
+
+	var paintValue = value.push();
 
 
 	//var current_value = value.push();
 
+	psiTurk.recordUnstructuredData("values",value);
+
+	psiTurk.recordUnstructuredData("prob",p);
+
+	psiTurk.recordUnstructuredData("paintType",paintingtype);
+	psiTurk.recordUnstructuredData("setorder",setorder);
+
+
 
 	function create() {
+		//alert("A"+value1);
 
 
 	//  We're going to be using physics, so enable the Arcade Physics system
@@ -287,7 +363,7 @@ var scoreText;
 
 
 
-		start_level_time = new Date().getTime()
+		start_level_time = new Date().getTime();
 
 		notwait = true;
 
@@ -353,11 +429,7 @@ var scoreText;
 
 		}, this);
 
-	if(Math.random()>p[round]){
-		var velo = 0;
-	}else{
-		var velo = 1000;
-	}
+
 //
 	function moveright() {
 
@@ -365,6 +437,12 @@ var scoreText;
 
 
 		if(lastSecond=="down"){
+
+			if(Math.random()>p[round]){
+				var velo = 0;
+			}else{
+				var velo = 800;
+			}
 			dontIncrement=false;
 			player.body.velocity.x = velo;
 			player.frame= 6;
@@ -695,7 +773,7 @@ var scoreText;
 
 		round = round + 1;
 
-		//console.log(round);
+		console.log(round);
 
 		star.destroy();
 
@@ -826,7 +904,7 @@ var scoreText;
 	function  wait_screen(){
 
 		notwait = false;
-		alert("repeatingA");
+		//alert("repeatingA");
 
 		player.kill();
 		star.kill();
@@ -945,9 +1023,9 @@ function playgame2() {
 		game.load.image('poll','/static/assets/pollock.jpg ' );
 		game.load.spritesheet('dude', '/static/assets/dude.png', 32, 48);
 
-		game.load.image('pic1','/static/assets/pic1.BMP' );game.load.image('pic2','/static/assets/pic2.BMP' );game.load.image('pic3','/static/assets/pic3.BMP' );game.load.image('pic4','/static/assets/pic4.BMP' );game.load.image('pic5','/static/assets/pic5.BMP' );game.load.image('pic6','/static/assets/pic6.BMP' );game.load.image('pic7','/static/assets/pic7.BMP' );game.load.image('pic8','/static/assets/pic8.BMP' );game.load.image('pic9','/static/assets/pic9.BMP' );
 
-		//http://localhost:22362/assets/platform.png
+
+		game.load.image('pic91','/static/assets/pic91.bmp' );game.load.image('pic92','/static/assets/pic92.bmp' );game.load.image('pic93','/static/assets/pic93.bmp' );game.load.image('pic94','/static/assets/pic94.bmp' );game.load.image('pic95','/static/assets/pic95.bmp' );game.load.image('pic96','/static/assets/pic96.bmp' );game.load.image('pic97','/static/assets/pic97.bmp' );game.load.image('pic98','/static/assets/pic98.bmp' );game.load.image('pic99','/static/assets/pic99.bmp' );		//http://localhost:22362/assets/platform.png
 
 	}
 
@@ -968,18 +1046,51 @@ function playgame2() {
 
 	var paint1;
 
+	var paint;
 
 
-	var p= [.9,.2,.5,.9,.9,.9,.2,.2,.9];
 
-	var value = [100,400,300,100,500,100,400,300,100];
+	var p1= [.2,.5,.9,.2,.5,.9,.2,.5,.9];
+
+	var value1 = [100,400,300,100,500,100,400,300,100];
 
 	var paintingtype=[];
+	var setorder=[];
 
-	for (i = 1; i < 40; i++) {
-		paintingtype.push(String("pic"+i))
+	for (i = 91; i < 100; i++) {
+		paintingtype.push(String("pic"+i));
+		setorder.push(i-91);
 
 	}
+
+	setorder = _.shuffle(setorder);
+
+
+	var p=[];
+	var value=[];
+
+
+	for (i = 0; i < 10; i++) {
+		p.push(p1[setorder[i]]);
+		value.push(value1[setorder[i]]);
+
+
+	}
+
+	paintingtype = _.shuffle(paintingtype);
+
+
+
+	psiTurk.recordUnstructuredData("values1",value);
+
+	psiTurk.recordUnstructuredData("prob1",p);
+
+	psiTurk.recordUnstructuredData("paintType1",paintingtype);
+	psiTurk.recordUnstructuredData("setorder1",setorder);
+
+
+
+
 	var numberofpresses=0;
 	var Trial_RT_Start;
 	var Trial_RT_Finish;
@@ -1114,8 +1225,13 @@ function playgame2() {
 
 
 
-		title_test = game.add.text(16, 46, 'Skipped work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' });
+		if (mycondition==="0"){
+			title_test = game.add.text(16, 46, 'Skipped work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' });
 
+		}else{
+			title_test = game.add.text(16, 46, 'Work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' });
+
+		}
 
 
 		//score_text =  game.add.text(16, 45, 'Score: $'+score, { fontSize: '32px', fill: '#000' });
@@ -1197,16 +1313,18 @@ function playgame2() {
 
 		}, this);
 
-		if(Math.random()>p[round]){
-			var velo = 0;
-		}else{
-			var velo = 1000;
-		}
+
 //
 		function moveright() {
 
 
 			if(lastSecond=="down"){
+
+				if(Math.random()>p[round]){
+					var velo = 0;
+				}else{
+					var velo = 800;
+				}
 				dontIncrement=false;
 				player.body.velocity.x = velo;
 				player.frame= 6;
@@ -1315,10 +1433,37 @@ function playgame2() {
 		console.log(paint1);
 
 
-		choiceLabel = game.add.text(w / 2, h - 440, 'What was the value of this skipped painting?', {
-			font: '30px Arial',
-			fill: '#fff'
-		});
+		if (mycondition==="0"){
+			choiceLabel = game.add.text(w / 2, h - 440, 'What was the value of this skipped painting?', {
+				font: '30px Arial',
+				fill: '#fff'
+			});
+
+			//alert(0);
+		} else if (mycondition==="1"){
+			choiceLabel = game.add.text(w / 2, h - 440, 'What is the value of this painting?', {
+				font: '30px Arial',
+				fill: '#fff'
+			});
+
+		} else if (mycondition==="3"){
+			choiceLabel = game.add.text(w / 2, h - 440, 'What is the value of this painting?', {
+				font: '30px Arial',
+				fill: '#fff'
+			});
+
+		}else{
+			choiceLabel = game.add.text(w / 2, h - 440, 'How much do you like this painting?', {
+				font: '30px Arial',
+				fill: '#fff'
+			});
+
+
+		}
+
+
+
+
 		choiceLabel.anchor.setTo(.5, .5);
 		choiceLabel.wordWrap = true;
 		choiceLabel.wordWrapWidth = 400;
@@ -1326,11 +1471,36 @@ function playgame2() {
 			font: '30px Arial',
 			fill: '#fff'
 		});
-		optionlabel1 = game.add.text(w / 2 - 180, h - 150, '$100', {font: '30px Arial', fill: '#fff'});
-		optionlabel2 = game.add.text(w / 2 - 90, h - 150, '$200', {font: '30px Arial', fill: '#fff'});
-		optionlabel3 = game.add.text(w / 2, h - 150, '$300', {font: '30px Arial', fill: '#fff'});
-		optionlabel4 = game.add.text(w / 2 + 90, h - 150, '$400', {font: '30px Arial', fill: '#fff'});
-		optionlabel5 = game.add.text(w / 2 + 180, h - 150, '$500', {font: '30px Arial', fill: '#fff'});
+
+		if(mycondition==="2"){
+
+			var TR1 = "1";
+			var TR2 = "2";
+			var TR3 = "3";
+			var TR4 = "4";
+			var TR5 = "5";
+
+			optionlabel1 = game.add.text(w / 2 - 180, h - 150, '1', {font: '30px Arial', fill: '#fff'});
+			optionlabel2 = game.add.text(w / 2 - 90, h - 150, '2', {font: '30px Arial', fill: '#fff'});
+			optionlabel3 = game.add.text(w / 2, h - 150, '3', {font: '30px Arial', fill: '#fff'});
+			optionlabel4 = game.add.text(w / 2 + 90, h - 150, '4', {font: '30px Arial', fill: '#fff'});
+			optionlabel5 = game.add.text(w / 2 + 180, h - 150, '5', {font: '30px Arial', fill: '#fff'});
+
+
+
+		}else {
+
+			var TR1 = '$100';
+			var TR2 = '$200';
+			var TR3 = '$300';
+			var TR4 = '$400';
+			var TR5 = '$500';
+			optionlabel1 = game.add.text(w / 2 - 180, h - 150, '$100', {font: '30px Arial', fill: '#fff'});
+			optionlabel2 = game.add.text(w / 2 - 90, h - 150, '$200', {font: '30px Arial', fill: '#fff'});
+			optionlabel3 = game.add.text(w / 2, h - 150, '$300', {font: '30px Arial', fill: '#fff'});
+			optionlabel4 = game.add.text(w / 2 + 90, h - 150, '$400', {font: '30px Arial', fill: '#fff'});
+			optionlabel5 = game.add.text(w / 2 + 180, h - 150, '$500', {font: '30px Arial', fill: '#fff'});
+		}
 		//not sure what this does
 		//optionlabel1.anchor.setTo(.5,.5);
 		//optionlabel2.anchor.setTo(.5,.5);
@@ -1352,6 +1522,9 @@ function playgame2() {
 
 		//need to add a way to record the score.
 
+
+
+
 		optionlabel1.events.onInputUp.add(function () {
 
 			Option_RT_Finish = new Date().getTime();
@@ -1363,7 +1536,9 @@ function playgame2() {
 
 			optionlabel1.destroy();
 
-			optionlabel1 = game.add.text(w / 2 - 180, h - 150, '$100', {font: '30px Arial', fill: '#000'});
+
+
+			optionlabel1 = game.add.text(w / 2 - 180, h - 150, TR1, {font: '30px Arial', fill: '#000'});
 
 
 			setTimeout(function () {
@@ -1392,7 +1567,7 @@ function playgame2() {
 
 			optionlabel2.destroy();
 
-			optionlabel2 = game.add.text(w / 2 - 90, h - 150, '$200', {font: '30px Arial', fill: '#000'});
+			optionlabel2 = game.add.text(w / 2 - 90, h - 150, TR2, {font: '30px Arial', fill: '#000'});
 
 
 			setTimeout(function () {
@@ -1419,7 +1594,7 @@ function playgame2() {
 
 
 			optionlabel3.destroy();
-			optionlabel3 = game.add.text(w / 2, h - 150, '$300', {font: '30px Arial', fill: '#000'});
+			optionlabel3 = game.add.text(w / 2, h - 150, TR3, {font: '30px Arial', fill: '#000'});
 
 
 			setTimeout(function () {
@@ -1447,7 +1622,7 @@ function playgame2() {
 
 
 			optionlabel4.destroy();
-			optionlabel4 = game.add.text(w / 2 + 90, h - 150, '$400', {font: '30px Arial', fill: '#000'});
+			optionlabel4 = game.add.text(w / 2 + 90, h - 150, TR4, {font: '30px Arial', fill: '#000'});
 
 
 			setTimeout(function () {
@@ -1475,7 +1650,7 @@ function playgame2() {
 
 			optionlabel5.destroy();
 
-			optionlabel5 = game.add.text(w / 2 + 180, h - 150, '$500', {font: '30px Arial', fill: '#000'});
+			optionlabel5 = game.add.text(w / 2 + 180, h - 150, TR5, {font: '30px Arial', fill: '#000'});
 
 
 			setTimeout(function () {
@@ -1634,7 +1809,14 @@ function playgame2() {
 
 
 
-		title_test = game.add.text(16, 46, 'Skipped work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' })
+		if (mycondition==="0"){
+			title_test = game.add.text(16, 46, 'Skipped work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' })
+
+		}else{
+			title_test = game.add.text(16, 46, 'Work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' })
+
+		}
+
 
 		numberofpresses = 0;
 
@@ -1688,6 +1870,9 @@ function playgame2() {
 
 var Questionnaire = function() {
 
+
+
+
 	gametime = "Afterfirst";
 
 	var error_message = "<h1>Oops!</h1><p>Something went wrong submitting your HIT. This might happen if you lose your internet connection. Press the button to resubmit.</p><button id='resubmit'>Resubmit</button>";
@@ -1726,6 +1911,17 @@ var Questionnaire = function() {
 	// Load the questionnaire snippet 
 	psiTurk.showPage('MidInstructions.html');
 	psiTurk.recordTrialData({'phase':'IntQ', 'status':'begin'});
+
+	if (mycondition==="0"){
+		document.getElementById("Ins0").style.display = 'block';
+	} else if (mycondition==="1"){
+		document.getElementById("Ins1").style.display = 'block';
+	}else if (mycondition==="2") {
+		document.getElementById("Ins2").style.display = 'block';
+	}else {
+		document.getElementById("Ins3").style.display = 'block';
+	}
+
 
 
 	//alert("pressed2")
@@ -1785,6 +1981,19 @@ var Questionnaire2 = function() {
 	// Load the questionnaire snippet
 	psiTurk.showPage('postquestionnaire2.html');
 	psiTurk.recordTrialData({'phase':'postquestionnaire1', 'status':'begin'});
+
+
+	if (mycondition==="3"){
+
+		document.getElementById("startegyq1Div").style.display = 'none';
+
+		document.getElementById("onesection").style.display = 'block';
+
+		document.getElementById("twosection").style.display = 'none';
+
+
+
+	}
 
 	$("#next").click(function () {
 		record_responses();
