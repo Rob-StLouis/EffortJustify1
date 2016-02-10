@@ -62,7 +62,7 @@ var gametime = "first";
 function playgame() {
 
 
-	alert(mycondition);
+	//alert(mycondition);
 
 	if (mycondition==="3"){
 
@@ -420,14 +420,14 @@ var scoreText;
 
 	}, this);
 
-		var skipSection = game.input.keyboard.addKey(Phaser.Keyboard.X);
-		skipSection.onDown.add(function () {
-
-			currentview = new Questionnaire();
-
-
-
-		}, this);
+		//var skipSection = game.input.keyboard.addKey(Phaser.Keyboard.X);
+		//skipSection.onDown.add(function () {
+        //
+		//	currentview = new Questionnaire();
+        //
+        //
+        //
+		//}, this);
 
 
 //
@@ -705,7 +705,7 @@ var scoreText;
 //
 //
 //			//round = round + 1;
-//			//alert(round);
+//			//s(round);
 //
 //
 //
@@ -1304,14 +1304,14 @@ function playgame2() {
         //
 		//}, this);
 
-		var skipSection = game.input.keyboard.addKey(Phaser.Keyboard.X);
-		skipSection.onDown.add(function () {
-
-			currentview = new Questionnaire2();
-
-
-
-		}, this);
+		//var skipSection = game.input.keyboard.addKey(Phaser.Keyboard.X);
+		//skipSection.onDown.add(function () {
+        //
+		//	currentview = new Questionnaire2();
+        //
+        //
+        //
+		//}, this);
 
 
 //
