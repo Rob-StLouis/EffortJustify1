@@ -1025,7 +1025,7 @@ function playgame2() {
 
 
 
-		game.load.image('pic91','/static/assets/pic91.bmp' );game.load.image('pic92','/static/assets/pic92.bmp' );game.load.image('pic93','/static/assets/pic93.bmp' );game.load.image('pic94','/static/assets/pic94.bmp' );game.load.image('pic95','/static/assets/pic95.bmp' );game.load.image('pic96','/static/assets/pic96.bmp' );game.load.image('pic97','/static/assets/pic97.bmp' );game.load.image('pic98','/static/assets/pic98.bmp' );game.load.image('pic99','/static/assets/pic99.bmp' );		//http://localhost:22362/assets/platform.png
+		game.load.image('pic91','/static/assets/pic91.BMP' );game.load.image('pic92','/static/assets/pic92.BMP' );game.load.image('pic93','/static/assets/pic93.BMP' );game.load.image('pic94','/static/assets/pic94.BMP' );game.load.image('pic95','/static/assets/pic95.BMP' );game.load.image('pic96','/static/assets/pic96.BMP' );game.load.image('pic97','/static/assets/pic97.BMP' );game.load.image('pic98','/static/assets/pic98.BMP' );game.load.image('pic99','/static/assets/pic99.BMP' );		//http://localhost:22362/assets/platform.png
 
 	}
 
