@@ -210,6 +210,9 @@ var scoreText;
 
 
 	function create() {
+		if (gametime != "first"){
+			return;
+		}
 		//alert("A"+value1);
 
 
@@ -438,11 +441,13 @@ var scoreText;
 
 		if(lastSecond=="down"){
 
-			if(Math.random()>p[round]){
-				var velo = 0;
-			}else{
-				var velo = 800;
-			}
+			//if(Math.random()>p[round]){
+			//	var velo = 0;
+			//}else{
+			//	var velo = 800;
+			//}
+
+			velo = 800*p[round];
 			dontIncrement=false;
 			player.body.velocity.x = velo;
 			player.frame= 6;
@@ -738,6 +743,9 @@ var scoreText;
 
 
 	function RecreateGame() {
+		if (gametime != "first"){
+			return;
+		}
 
 
 		player.kill();
@@ -849,6 +857,9 @@ var scoreText;
 	}
 
 	function Score_calc(){
+		if (gametime != "first"){
+			return;
+		}
 
 
 
@@ -886,6 +897,9 @@ var scoreText;
 
 
 	function  got_painting(){
+		if (gametime != "first"){
+			return;
+		}
 
 
 		allow_restart=false;
@@ -902,6 +916,9 @@ var scoreText;
 	}
 
 	function  wait_screen(){
+		if (gametime != "first"){
+			return;
+		}
 
 		notwait = false;
 		//alert("repeatingA");
@@ -947,6 +964,9 @@ var scoreText;
 	}
 
 	function counter(){
+		if (gametime != "first"){
+			return;
+		}
 
 		if (time_remaining>0){
 			time_remaining = time_remaining -1;
@@ -1010,22 +1030,25 @@ function playgame2() {
 //	while ( el.firstChild ) el.removeChild( el.firstChild );
 
 
-	var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+	var game2 = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
 
 
 
 	function preload() {
+		if (gametime != "second"){
+			return;
+		}
 
-		game.load.image('sky', '/static/assets/sky.png');
-		game.load.image('ground', '/static/assets/platform.png');
-		game.load.image('star', '/static/assets/castle.png ');
-		game.load.image('mond','/static/assets/mondrian.jpg ' );
-		game.load.image('poll','/static/assets/pollock.jpg ' );
-		game.load.spritesheet('dude', '/static/assets/dude.png', 32, 48);
+		game2.load.image('sky', '/static/assets/sky.png');
+		game2.load.image('ground', '/static/assets/platform.png');
+		game2.load.image('star', '/static/assets/castle.png ');
+		game2.load.image('mond','/static/assets/mondrian.jpg ' );
+		game2.load.image('poll','/static/assets/pollock.jpg ' );
+		game2.load.spritesheet('dude', '/static/assets/dude.png', 32, 48);
 
 
 
-		game.load.image('pic91','/static/assets/pic91.BMP' );game.load.image('pic92','/static/assets/pic92.BMP' );game.load.image('pic93','/static/assets/pic93.BMP' );game.load.image('pic94','/static/assets/pic94.BMP' );game.load.image('pic95','/static/assets/pic95.BMP' );game.load.image('pic96','/static/assets/pic96.BMP' );game.load.image('pic97','/static/assets/pic97.BMP' );game.load.image('pic98','/static/assets/pic98.BMP' );game.load.image('pic99','/static/assets/pic99.BMP' );		//http://localhost:22362/assets/platform.png
+		game2.load.image('pic91','/static/assets/pic91.BMP' );game2.load.image('pic92','/static/assets/pic92.BMP' );game2.load.image('pic93','/static/assets/pic93.BMP' );game2.load.image('pic94','/static/assets/pic94.BMP' );game2.load.image('pic95','/static/assets/pic95.BMP' );game2.load.image('pic96','/static/assets/pic96.BMP' );game2.load.image('pic97','/static/assets/pic97.BMP' );game2.load.image('pic98','/static/assets/pic98.BMP' );game2.load.image('pic99','/static/assets/pic99.BMP' );		//http://localhost:22362/assets/platform.png
 
 	}
 
@@ -1106,23 +1129,27 @@ function playgame2() {
 
 
 	function create() {
+		if (gametime != "second"){
+			return;
+		}
+
 
 
 		//  We're going to be using physics, so enable the Arcade Physics system
-		game.physics.startSystem(Phaser.Physics.ARCADE);
+		game2.physics.startSystem(Phaser.Physics.ARCADE);
 
 		//  A simple background for our game
-		game.add.sprite(0, 0, 'sky');
+		game2.add.sprite(0, 0, 'sky');
 
 		//  The platforms group contains the ground and the 2 ledges we can jump on
-		platforms = game.add.group();
+		platforms = game2.add.group();
 
 		//  We will enable physics for any object that is created in this group
 		platforms.enableBody = true;
 
 
 		// Here we create the ground.
-		var ground = platforms.create(0, game.world.height - 64, 'ground');
+		var ground = platforms.create(0, game2.world.height - 64, 'ground');
 
 		//  Scale it to fit the width of the game (the original sprite is 400x32 in size)
 		ground.scale.setTo(2, 2);
@@ -1132,10 +1159,10 @@ function playgame2() {
 
 
 		// The player and its settings
-		player = game.add.sprite(32, game.world.height - 150, 'dude');
+		player = game2.add.sprite(32, game2.world.height - 150, 'dude');
 
 		//  We need to enable physics on the player
-		game.physics.arcade.enable(player);
+		game2.physics.arcade.enable(player);
 
 		//  Player physics properties. Give the little guy a slight bounce.
 		player.body.bounce.y = 0.2;
@@ -1147,7 +1174,7 @@ function playgame2() {
 		player.animations.add('right', [5, 6, 7, 8], 10, true);
 
 		//  Finally some stars to collect
-		stars = game.add.group();
+		stars = game2.add.group();
 
 		//  We will enable physics for any star that is created in this group
 		stars.enableBody = true;
@@ -1205,7 +1232,7 @@ function playgame2() {
 
 		paint1 = paintingtype.shift();
 		scaleP1 = .75;
-		star = stars.create(550, game.world.height - heightStar, paint1);
+		star = stars.create(550, game2.world.height - heightStar, paint1);
 		star.scale.setTo(scaleP1,scaleP1);
 
 
@@ -1221,15 +1248,15 @@ function playgame2() {
 //    }
 
 		// instructions
-		instruct_text = game.add.text(16, 16, 'Press the right arrow key to move right', { fontSize: '32px', fill: '#000' });
+		instruct_text = game2.add.text(16, 16, 'Press the right arrow key to move right', { fontSize: '32px', fill: '#000' });
 
 
 
 		if (mycondition==="0"){
-			title_test = game.add.text(16, 46, 'Skipped work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' });
+			title_test = game2.add.text(16, 46, 'Skipped work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' });
 
 		}else{
-			title_test = game.add.text(16, 46, 'Work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' });
+			title_test = game2.add.text(16, 46, 'Work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' });
 
 		}
 
@@ -1241,7 +1268,7 @@ function playgame2() {
 
 
 		//  Our controls.
-		cursors = game.input.keyboard.createCursorKeys();
+		cursors = game2.input.keyboard.createCursorKeys();
 
 		allow_restart = true;
 
@@ -1257,11 +1284,15 @@ function playgame2() {
 
 
 	function update() {
+		if (gametime != "second"){
+			return;
+		}
+
 
 		//  Collide the player and the stars with the platforms
-		game.physics.arcade.collide(player, platforms);
-		game.physics.arcade.collide(stars, platforms);
-		game.physics.arcade.collide(platforms, platforms);
+		game2.physics.arcade.collide(player, platforms);
+		game2.physics.arcade.collide(stars, platforms);
+		game2.physics.arcade.collide(platforms, platforms);
 
 
 		if(checkpaint !== paint1){
@@ -1271,7 +1302,7 @@ function playgame2() {
 		//  Checks to see if the player overlaps with any of the stars, if he does call the collectStar function
 
 		if(allow_restart){
-			game.physics.arcade.overlap(player, stars, collectStar,null,this);
+			game2.physics.arcade.overlap(player, stars, collectStar,null,this);
 		}
 
 
@@ -1281,12 +1312,12 @@ function playgame2() {
 		//  Reset the players velocity (movement)
 		player.body.velocity.x = 0;
 
-		var flapKey = game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
+		var flapKey = game2.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
 		flapKey.onUp.add(moveright);
 
 		dontIncrement = true;
 
-		var flapKey2 = game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
+		var flapKey2 = game2.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
 		flapKey2.onDown.add(showright);
 
 		dontIncrement = true;
@@ -1320,11 +1351,14 @@ function playgame2() {
 
 			if(lastSecond=="down"){
 
-				if(Math.random()>p[round]){
-					var velo = 0;
-				}else{
-					var velo = 800;
-				}
+				//if(Math.random()>p[round]){
+				//	var velo = 0;
+				//}else{
+				//	var velo = 800;
+				//}
+
+				velo = 800*p[round];
+
 				dontIncrement=false;
 				player.body.velocity.x = velo;
 				player.frame= 6;
@@ -1377,6 +1411,10 @@ function playgame2() {
 
 
 	function collectStar (player, star) {
+		if (gametime != "second"){
+			return;
+		}
+
 
 
 		Trial_RT_Finish = new Date().getTime();
@@ -1434,26 +1472,26 @@ function playgame2() {
 
 
 		if (mycondition==="0"){
-			choiceLabel = game.add.text(w / 2, h - 440, 'What was the value of this skipped painting?', {
+			choiceLabel = game2.add.text(w / 2, h - 440, 'What was the value of this skipped painting?', {
 				font: '30px Arial',
 				fill: '#fff'
 			});
 
 			//alert(0);
 		} else if (mycondition==="1"){
-			choiceLabel = game.add.text(w / 2, h - 440, 'What is the value of this painting?', {
+			choiceLabel = game2.add.text(w / 2, h - 440, 'What is the value of this painting?', {
 				font: '30px Arial',
 				fill: '#fff'
 			});
 
 		} else if (mycondition==="3"){
-			choiceLabel = game.add.text(w / 2, h - 440, 'What is the value of this painting?', {
+			choiceLabel = game2.add.text(w / 2, h - 440, 'What is the value of this painting?', {
 				font: '30px Arial',
 				fill: '#fff'
 			});
 
 		}else{
-			choiceLabel = game.add.text(w / 2, h - 440, 'How much do you like this painting?', {
+			choiceLabel = game2.add.text(w / 2, h - 440, 'How much do you like this painting?', {
 				font: '30px Arial',
 				fill: '#fff'
 			});
@@ -1467,7 +1505,7 @@ function playgame2() {
 		choiceLabel.anchor.setTo(.5, .5);
 		choiceLabel.wordWrap = true;
 		choiceLabel.wordWrapWidth = 400;
-		optionlabelInst = game.add.text(w / 4, h - 180, 'Please select a number below', {
+		optionlabelInst = game2.add.text(w / 4, h - 180, 'Please select a number below', {
 			font: '30px Arial',
 			fill: '#fff'
 		});
@@ -1480,11 +1518,11 @@ function playgame2() {
 			var TR4 = "4";
 			var TR5 = "5";
 
-			optionlabel1 = game.add.text(w / 2 - 180, h - 150, '1', {font: '30px Arial', fill: '#fff'});
-			optionlabel2 = game.add.text(w / 2 - 90, h - 150, '2', {font: '30px Arial', fill: '#fff'});
-			optionlabel3 = game.add.text(w / 2, h - 150, '3', {font: '30px Arial', fill: '#fff'});
-			optionlabel4 = game.add.text(w / 2 + 90, h - 150, '4', {font: '30px Arial', fill: '#fff'});
-			optionlabel5 = game.add.text(w / 2 + 180, h - 150, '5', {font: '30px Arial', fill: '#fff'});
+			optionlabel1 = game2.add.text(w / 2 - 180, h - 150, '1', {font: '30px Arial', fill: '#fff'});
+			optionlabel2 = game2.add.text(w / 2 - 90, h - 150, '2', {font: '30px Arial', fill: '#fff'});
+			optionlabel3 = game2.add.text(w / 2, h - 150, '3', {font: '30px Arial', fill: '#fff'});
+			optionlabel4 = game2.add.text(w / 2 + 90, h - 150, '4', {font: '30px Arial', fill: '#fff'});
+			optionlabel5 = game2.add.text(w / 2 + 180, h - 150, '5', {font: '30px Arial', fill: '#fff'});
 
 
 
@@ -1495,11 +1533,11 @@ function playgame2() {
 			var TR3 = '$300';
 			var TR4 = '$400';
 			var TR5 = '$500';
-			optionlabel1 = game.add.text(w / 2 - 180, h - 150, '$100', {font: '30px Arial', fill: '#fff'});
-			optionlabel2 = game.add.text(w / 2 - 90, h - 150, '$200', {font: '30px Arial', fill: '#fff'});
-			optionlabel3 = game.add.text(w / 2, h - 150, '$300', {font: '30px Arial', fill: '#fff'});
-			optionlabel4 = game.add.text(w / 2 + 90, h - 150, '$400', {font: '30px Arial', fill: '#fff'});
-			optionlabel5 = game.add.text(w / 2 + 180, h - 150, '$500', {font: '30px Arial', fill: '#fff'});
+			optionlabel1 = game2.add.text(w / 2 - 180, h - 150, '$100', {font: '30px Arial', fill: '#fff'});
+			optionlabel2 = game2.add.text(w / 2 - 90, h - 150, '$200', {font: '30px Arial', fill: '#fff'});
+			optionlabel3 = game2.add.text(w / 2, h - 150, '$300', {font: '30px Arial', fill: '#fff'});
+			optionlabel4 = game2.add.text(w / 2 + 90, h - 150, '$400', {font: '30px Arial', fill: '#fff'});
+			optionlabel5 = game2.add.text(w / 2 + 180, h - 150, '$500', {font: '30px Arial', fill: '#fff'});
 		}
 		//not sure what this does
 		//optionlabel1.anchor.setTo(.5,.5);
@@ -1538,7 +1576,7 @@ function playgame2() {
 
 
 
-			optionlabel1 = game.add.text(w / 2 - 180, h - 150, TR1, {font: '30px Arial', fill: '#000'});
+			optionlabel1 = game2.add.text(w / 2 - 180, h - 150, TR1, {font: '30px Arial', fill: '#000'});
 
 
 			setTimeout(function () {
@@ -1567,7 +1605,7 @@ function playgame2() {
 
 			optionlabel2.destroy();
 
-			optionlabel2 = game.add.text(w / 2 - 90, h - 150, TR2, {font: '30px Arial', fill: '#000'});
+			optionlabel2 = game2.add.text(w / 2 - 90, h - 150, TR2, {font: '30px Arial', fill: '#000'});
 
 
 			setTimeout(function () {
@@ -1594,7 +1632,7 @@ function playgame2() {
 
 
 			optionlabel3.destroy();
-			optionlabel3 = game.add.text(w / 2, h - 150, TR3, {font: '30px Arial', fill: '#000'});
+			optionlabel3 = game2.add.text(w / 2, h - 150, TR3, {font: '30px Arial', fill: '#000'});
 
 
 			setTimeout(function () {
@@ -1622,7 +1660,7 @@ function playgame2() {
 
 
 			optionlabel4.destroy();
-			optionlabel4 = game.add.text(w / 2 + 90, h - 150, TR4, {font: '30px Arial', fill: '#000'});
+			optionlabel4 = game2.add.text(w / 2 + 90, h - 150, TR4, {font: '30px Arial', fill: '#000'});
 
 
 			setTimeout(function () {
@@ -1650,7 +1688,7 @@ function playgame2() {
 
 			optionlabel5.destroy();
 
-			optionlabel5 = game.add.text(w / 2 + 180, h - 150, TR5, {font: '30px Arial', fill: '#000'});
+			optionlabel5 = game2.add.text(w / 2 + 180, h - 150, TR5, {font: '30px Arial', fill: '#000'});
 
 
 			setTimeout(function () {
@@ -1682,6 +1720,10 @@ function playgame2() {
 	}
 
 	function clear_text(){
+		if (gametime != "second"){
+			return;
+		}
+
 
 		optionlabel1.destroy();
 		optionlabel2.destroy();
@@ -1711,10 +1753,10 @@ function playgame2() {
 
 
 		// The player and its settings
-		player = game.add.sprite(32, game.world.height - 150, 'dude');
+		player = game2.add.sprite(32, game2.world.height - 150, 'dude');
 
 		//  We need to enable physics on the player
-		game.physics.arcade.enable(player);
+		game2.physics.arcade.enable(player);
 
 		//  Player physics properties. Give the little guy a slight bounce.
 		player.body.bounce.y = 0.2;
@@ -1726,7 +1768,7 @@ function playgame2() {
 		player.animations.add('right', [5, 6, 7, 8], 10, true);
 
 		//  Finally some stars to collect
-		stars = game.add.group();
+		stars = game2.add.group();
 
 		//  We will enable physics for any star that is created in this group
 		stars.enableBody = true;
@@ -1797,7 +1839,7 @@ function playgame2() {
 
 		paint1 = paintingtype.shift();
 		scaleP1 = .75;
-		star = stars.create(550, game.world.height - heightStar, paint1);
+		star = stars.create(550, game2.world.height - heightStar, paint1);
 		star.scale.setTo(scaleP1, scaleP1);
 
 		//paintValue = value.shift();
@@ -1805,15 +1847,15 @@ function playgame2() {
 		//paint_label.destroy();
 		//paint_label = game.add.text(600, 300, '$'+ paintValue, { fontSize: '32px', fill: '#000' });
 
-		instruct_text = game.add.text(16, 16, 'Press the right arrow key to move right', { fontSize: '32px', fill: '#000' });
+		instruct_text = game2.add.text(16, 16, 'Press the right arrow key to move right', { fontSize: '32px', fill: '#000' });
 
 
 
 		if (mycondition==="0"){
-			title_test = game.add.text(16, 46, 'Skipped work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' })
+			title_test = game2.add.text(16, 46, 'Skipped work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' })
 
 		}else{
-			title_test = game.add.text(16, 46, 'Work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' })
+			title_test = game2.add.text(16, 46, 'Work of calligraphy '+ (round+1), { fontSize: '32px', fill: '#000' })
 
 		}
 
@@ -1929,6 +1971,7 @@ var Questionnaire = function() {
 	$("#next").click(function () {
 	    //record_responses();
         //alert("pressed1");
+		gametime = "second";
 		currentview = playgame2();
 		//alert("pressed");
 	    psiTurk.saveData({
@@ -1944,6 +1987,7 @@ var Questionnaire = function() {
 };
 
 var Questionnaire2 = function() {
+	gametime = "over";
 
 	var error_message = "<h1>Oops!</h1><p>Something went wrong submitting your HIT. This might happen if you lose your internet connection. Press the button to resubmit.</p><button id='resubmit'>Resubmit</button>";
 
