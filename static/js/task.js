@@ -523,7 +523,7 @@ var scoreText;
 			}
 		}
 
-}
+}}
 
 
 
@@ -899,7 +899,7 @@ var scoreText;
 
 
 
-	}}
+	}
 
 
 
