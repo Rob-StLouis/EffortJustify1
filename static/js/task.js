@@ -376,9 +376,11 @@ var scoreText;
 
 
 
-	function update() {
+	function update() {update:{
 		if (gametime != "first"){
-			return;
+
+			break update;
+			//alert("should");
 		}
 
 	//  Collide the player and the stars with the platforms
@@ -423,14 +425,17 @@ var scoreText;
 
 	}, this);
 
-		//var skipSection = game.input.keyboard.addKey(Phaser.Keyboard.X);
-		//skipSection.onDown.add(function () {
-        //
-		//	currentview = new Questionnaire();
-        //
-        //
-        //
-		//}, this);
+		var skipSection = game.input.keyboard.addKey(Phaser.Keyboard.X);
+		skipSection.onDown.add(function () {
+			//alert(gametime);
+
+			game.destroy();
+
+			currentview = new Questionnaire();
+
+
+
+		}, this);
 
 
 //
@@ -447,7 +452,7 @@ var scoreText;
 			//	var velo = 800;
 			//}
 
-			velo = 800*p[round];
+			velo = 1600*p[round];
 			dontIncrement=false;
 			player.body.velocity.x = velo;
 			player.frame= 6;
@@ -455,6 +460,7 @@ var scoreText;
 			numberofpresses +=1;
 			dontIncrement=true;
 			lastSecond = "up";
+
 
 		}
 		player.frame = 4;
@@ -510,6 +516,7 @@ var scoreText;
 
 
 				psiTurk.recordTrialData({'result':"sectionEnd", 'numpressess':numberofpresses,'diff':p[round], 'value':paintValue,'painting':paint,"rt":rt});
+				game.input.keyboard.clearCaptures();
 
 				currentview = new Questionnaire();
 				gameover =false;
@@ -892,7 +899,7 @@ var scoreText;
 
 
 
-	}
+	}}
 
 
 
@@ -900,6 +907,9 @@ var scoreText;
 		if (gametime != "first"){
 			return;
 		}
+
+
+
 
 
 		allow_restart=false;
@@ -1015,10 +1025,14 @@ var scoreText;
 function playgame2() {
 
 
+	playgame = "";
+	game ="";
+
+
 
 
 	//if(round===0){
-	psiTurk.showPage('stage.html');
+	psiTurk.showPage('stage2.html');
 //	}else if (round===1){
 //	psiTurk.showPage('stage2.html');
 //}else{
@@ -1357,7 +1371,7 @@ function playgame2() {
 				//	var velo = 800;
 				//}
 
-				velo = 800*p[round];
+				velo = 1600*p[round];
 
 				dontIncrement=false;
 				player.body.velocity.x = velo;
@@ -1583,6 +1597,9 @@ function playgame2() {
 
 
 				if (round === 8) {
+
+					game2.input.keyboard.clearCaptures();
+					game2.destroy();
 					currentview = new Questionnaire2();
 
 				} else {
@@ -1612,7 +1629,10 @@ function playgame2() {
 
 
 				if (round === 8) {
-					currentview = new Questionnaire2();s
+
+					game2.input.keyboard.clearCaptures();
+					game2.destroy();
+					currentview = new Questionnaire2();
 
 				} else {
 					clear_text();
@@ -1639,6 +1659,9 @@ function playgame2() {
 
 
 				if (round === 8) {
+					game2.input.keyboard.clearCaptures();
+					game2.destroy();
+
 					currentview = new Questionnaire2();
 
 				} else {
@@ -1667,6 +1690,9 @@ function playgame2() {
 
 
 				if (round === 8) {
+					game2.input.keyboard.clearCaptures();
+					game2.destroy();
+
 					currentview = new Questionnaire2();
 
 				} else {
@@ -1695,6 +1721,10 @@ function playgame2() {
 
 
 				if (round === 8) {
+					game2.input.keyboard.clearCaptures();
+					game2.destroy();
+
+
 					currentview = new Questionnaire2();
 
 				} else {
