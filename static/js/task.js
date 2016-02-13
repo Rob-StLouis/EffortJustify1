@@ -425,17 +425,17 @@ var scoreText;
 
 	}, this);
 
-		var skipSection = game.input.keyboard.addKey(Phaser.Keyboard.X);
-		skipSection.onDown.add(function () {
-			//alert(gametime);
-
-			game.destroy();
-
-			currentview = new Questionnaire();
-
-
-
-		}, this);
+		//var skipSection = game.input.keyboard.addKey(Phaser.Keyboard.X);
+		//skipSection.onDown.add(function () {
+		//	//alert(gametime);
+        //
+		//	game.destroy();
+        //
+		//	currentview = new Questionnaire();
+        //
+        //
+        //
+		//}, this);
 
 
 //
