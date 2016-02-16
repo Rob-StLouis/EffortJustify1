@@ -413,6 +413,7 @@ var scoreText;
 	skipGame.onDown.add(function () {
 
 		if(allow_restart){
+			
 			resultAct = "skipped";
 			wait_screen();
 			//console.log("pressed");
