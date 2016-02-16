@@ -1881,6 +1881,7 @@ function playgame2() {
 
 		//paintValue = value.shift();
 		////alert(paintValue);
+		
 		//paint_label.destroy();
 		//paint_label = game.add.text(600, 300, '$'+ paintValue, { fontSize: '32px', fill: '#000' });
 
