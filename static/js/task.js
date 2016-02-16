@@ -1877,6 +1877,7 @@ function playgame2() {
 		//paint_label.destroy();
 		//paint_label = game.add.text(600, 300, '$'+ paintValue, { fontSize: '32px', fill: '#000' });
 
+		
 		instruct_text = game2.add.text(16, 16, 'Press the right arrow key to move right', { fontSize: '32px', fill: '#000' });
 
 
