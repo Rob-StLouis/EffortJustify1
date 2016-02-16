@@ -413,9 +413,9 @@ var scoreText;
 	skipGame.onDown.add(function () {
 
 		if(allow_restart){
-			resultAct = "skipped";
 			wait_screen();
 			//console.log("pressed");
+			resultAct = "skipped";
 			allow_restart=false;
 
 
@@ -452,9 +452,7 @@ var scoreText;
 			//	var velo = 800;
 			//}
 
-			//alert(p[round]);
-
-			velo = 800*p[round];
+			velo = 1600*p[round];
 			dontIncrement=false;
 			player.body.velocity.x = velo;
 			player.frame= 6;
@@ -462,8 +460,6 @@ var scoreText;
 			numberofpresses +=1;
 			dontIncrement=true;
 			lastSecond = "up";
-
-
 
 
 		}
@@ -759,8 +755,6 @@ var scoreText;
 		}
 
 
-
-
 		player.kill();
 		star.kill();
 
@@ -794,8 +788,7 @@ var scoreText;
 
 		round = round + 1;
 
-		//console.log(round);
-		//alert([p[round],800*p[round]]);
+		console.log(round);
 
 		star.destroy();
 
@@ -1378,7 +1371,7 @@ function playgame2() {
 				//	var velo = 800;
 				//}
 
-				velo = 600*p[round];
+				velo = 1600*p[round];
 
 				dontIncrement=false;
 				player.body.velocity.x = velo;
@@ -1881,7 +1874,6 @@ function playgame2() {
 
 		//paintValue = value.shift();
 		////alert(paintValue);
-		
 		//paint_label.destroy();
 		//paint_label = game.add.text(600, 300, '$'+ paintValue, { fontSize: '32px', fill: '#000' });
 
